@@ -1,0 +1,31 @@
+id,name,region,device_type,connectivity
+f7e43711-27c7-4d70-be94-9447a62d0525,Akinwale College,Ibadan,desktop,online
+a227c995-fae6-4571-9ad0-de9d89b5b461,Okafor College,Kano,tablet,online
+74931cd6-6a22-424b-83a6-13c921ef2bcb,Okonkwo College,Enugu,laptop,intermittent
+89056865-9b7e-4dee-9b76-a42aced62e82,Abiola College,Port Harcourt,desktop,offline
+af91eb27-73ee-4cad-8399-ba4fb4fc920c,Abiola College,Abuja,laptop,intermittent
+67ca4473-4e34-4cf8-940d-3ca919782ee0,Ekwueme College,Enugu,desktop,online
+57b9e710-2d2e-4a04-9b8b-f09065fdcfd5,Obasanjo College,Enugu,laptop,intermittent
+b0ff8174-29fa-4bbd-b775-11520261e01a,Adeyemi College,Enugu,tablet,intermittent
+4a9a785e-ca16-49bd-946f-8f8091a415ff,Uche College,Kano,tablet,online
+f89ef774-e66b-43db-abc7-a9c38c45a170,Obasanjo College,Enugu,desktop,online
+075ab80f-34c0-4032-b37f-e71569d8a4ad,Okonkwo College,Kano,tablet,offline
+75d659a9-c881-4186-9cf6-6d8164147db8,Ogunleye College,Port Harcourt,desktop,intermittent
+484f473e-3561-4253-9902-1cfac6fb2524,Okonkwo College,Lagos,tablet,online
+09cfe5e3-8212-46fd-9187-f900badf55d7,Oshodi College,Abuja,laptop,intermittent
+7c59bbc1-16c8-44e3-add2-d6d30882e6cd,Obasanjo College,Lagos,tablet,intermittent
+e57a436c-10ad-438e-944b-9330f8f167e3,Olawale College,Ibadan,laptop,intermittent
+fdd6fcc7-7e25-4259-8b02-680a63f964b4,Obi College,Ibadan,tablet,online
+45299656-229f-4c35-bd3e-f6c247d38c68,Obi College,Ibadan,tablet,offline
+e8d59e53-ff7e-4392-8527-139c45de49ee,Uche College,Kano,tablet,offline
+a6ac8320-36d3-423a-b81f-93c5897415eb,Olawale College,Abuja,tablet,intermittent
+80648901-c197-44b5-bd5f-e5c4544dc5f3,Balogun College,Lagos,desktop,intermittent
+c14a4e30-1aa5-4f93-95c0-3790e4e01b85,Uche College,Port Harcourt,laptop,offline
+154c68b5-d89a-4e23-9ab0-287cb3ba8988,Oyekan College,Port Harcourt,tablet,intermittent
+4ee4b411-beba-497e-91ed-5340d3bbcb73,Akinwale College,Enugu,laptop,offline
+0c0df885-8770-4493-889e-515d3b5f511c,Uche College,Kano,tablet,online
+576add09-5a4c-497b-b2a3-c9e5f89d5d63,Uche College,Ibadan,laptop,online
+6a94ce44-7c41-445a-95f4-f7e5f14db1cf,Ekwueme College,Abuja,tablet,online
+d95edb63-a876-434d-9cfa-5de41840f04e,Olawale College,Port Harcourt,tablet,intermittent
+27061aa7-e872-4b8b-85de-94487d694153,Eze College,Port Harcourt,laptop,intermittent
+548f4551-e04b-454e-9956-ac423e4684e6,Chukwu College,Lagos,desktop,intermittent
