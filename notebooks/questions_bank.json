@@ -1,0 +1,324 @@
+{
+  "Solar": [
+    {"question": "What is photovoltaic effect?", "answer": "It is the process by which solar cells convert sunlight into electricity."},
+    {"question": "Name one advantage of solar energy.", "answer": "It is renewable and environmentally friendly."},
+    {"question": "What does PV stand for in Solar PV?", "answer": "Photovoltaic"},
+    {"question": "What is the main component of a solar panel?", "answer": "Solar cells made of silicon"},
+    {"question": "How can solar energy be stored?", "answer": "Using batteries or thermal storage systems"}
+  ],
+  "Fashion": [
+    {"question": "Define fashion design.", "answer": "The art of applying design and aesthetics to clothing and accessories."},
+    {"question": "What is a pattern in garment making?", "answer": "A template used to cut fabric pieces."},
+    {"question": "Name one type of stitching technique.", "answer": "Running stitch"},
+    {"question": "What is haute couture?", "answer": "High-end, custom-fitted fashion design."},
+    {"question": "What does 'bias' mean in fabric cutting?", "answer": "Cutting fabric diagonally across the grain."}
+  ],
+  "Livestock": [
+    {"question": "Name one type of livestock animal.", "answer": "Cattle"},
+    {"question": "What is poultry farming?", "answer": "Raising domesticated birds such as chickens for eggs or meat."},
+    {"question": "Define grazing.", "answer": "Allowing animals to feed on grass or pasture."},
+    {"question": "What is artificial insemination in livestock?", "answer": "Introducing semen into the female reproductive system without natural mating."},
+    {"question": "Why is livestock vaccination important?", "answer": "It prevents diseases and ensures healthy animals."}
+  ],
+  "Computer": [
+    {"question": "What does CPU stand for?", "answer": "Central Processing Unit"},
+    {"question": "Define software.", "answer": "A set of programs that tell the computer how to perform tasks."},
+    {"question": "Name a programming language.", "answer": "Python"},
+    {"question": "What is the function of RAM?", "answer": "Stores data temporarily for fast access by the CPU."},
+    {"question": "Define computer network.", "answer": "A group of interconnected computers that share resources."}
+  ],
+  "Horticulture": [
+    {"question": "What is horticulture?", "answer": "The art and science of growing fruits, vegetables, flowers, and ornamental plants."},
+    {"question": "Define grafting.", "answer": "Joining two plant parts so they grow as one."},
+    {"question": "Name one method of soil fertility improvement.", "answer": "Using organic manure or compost."},
+    {"question": "What is hydroponics?", "answer": "Growing plants without soil using nutrient solutions."},
+    {"question": "Give one benefit of crop rotation.", "answer": "Prevents soil depletion and reduces pests and diseases."}
+  ],
+  "Arabic": [
+    {"question": "Write the Arabic word for 'peace'.", "answer": "سلام (Salaam)"},
+    {"question": "What is the Arabic script direction?", "answer": "Right to left"},
+    {"question": "Name one Arabic vowel.", "answer": "Fatha"},
+    {"question": "Translate 'book' to Arabic.", "answer": "كتاب (Kitab)"},
+    {"question": "What is a common greeting in Arabic?", "answer": "السلام عليكم (Assalamu Alaikum)"}
+  ],
+  "Basic Science and Technology": [
+    {"question": "What is photosynthesis?", "answer": "Process by which plants make food using sunlight, carbon dioxide, and water."},
+    {"question": "Define force.", "answer": "A push or pull that changes the motion of an object."},
+    {"question": "What is matter?", "answer": "Anything that has mass and occupies space."},
+    {"question": "Name three states of matter.", "answer": "Solid, Liquid, Gas"},
+    {"question": "What is electricity?", "answer": "A form of energy caused by the movement of electrons."}
+  ],
+  "Culture and Creative Arts": [
+    {"question": "Name a traditional Nigerian musical instrument.", "answer": "Talking drum"},
+    {"question": "Define painting.", "answer": "The practice of applying paint to a surface to create art."},
+    {"question": "What is sculpture?", "answer": "The art of shaping materials like clay or stone into a form."},
+    {"question": "Name one Nigerian festival.", "answer": "Durbar Festival"},
+    {"question": "What is origami?", "answer": "The art of paper folding."}
+  ],
+  "English Studies": [
+    {"question": "Define a noun.", "answer": "A word that identifies a person, place, or thing."},
+    {"question": "What is a verb?", "answer": "A word that shows action or state."},
+    {"question": "Give a synonym for 'happy'.", "answer": "Joyful"},
+    {"question": "Correct this sentence: 'She go to school.'", "answer": "She goes to school."},
+    {"question": "Define adjective.", "answer": "A word that describes a noun or pronoun."}
+  ],
+  "French": [
+    {"question": "Translate 'hello' to French.", "answer": "Bonjour"},
+    {"question": "What is the French word for 'book'?", "answer": "Livre"},
+    {"question": "Define 'merci'.", "answer": "Thank you"},
+    {"question": "Translate 'good night' to French.", "answer": "Bonne nuit"},
+    {"question": "What is 'apple' in French?", "answer": "Pomme"}
+  ],
+  "Mathematics": [
+    {"question": "What is 7 × 6?", "answer": "42"},
+    {"question": "Solve for x: 2x + 5 = 15", "answer": "x = 5"},
+    {"question": "What is the square root of 49?", "answer": "7"},
+    {"question": "Simplify: 3x + 4x", "answer": "7x"},
+    {"question": "What is 15 ÷ 3?", "answer": "5"}
+  ],
+  "National Values": [
+    {"question": "Define patriotism.", "answer": "Love and devotion to one's country."},
+    {"question": "What is civic responsibility?", "answer": "Duties of citizens to uphold the law and participate in governance."},
+    {"question": "Give one example of a national value.", "answer": "Honesty"},
+    {"question": "Why is integrity important?", "answer": "It builds trust and credibility."},
+    {"question": "Define leadership.", "answer": "The ability to guide or influence others."}
+  ],
+  "Hausa": [
+    {"question": "Translate 'hello' to Hausa.", "answer": "Sannu"},
+    {"question": "What is 'thank you' in Hausa?", "answer": "Nagode"},
+    {"question": "Translate 'house' to Hausa.", "answer": "Gida"},
+    {"question": "What is the Hausa word for 'friend'?", "answer": "Aboki"},
+    {"question": "Translate 'water' to Hausa.", "answer": "Ruwa"}
+  ],
+  "Igbo": [
+    {"question": "Translate 'hello' to Igbo.", "answer": "Ndewo"},
+    {"question": "What is 'thank you' in Igbo?", "answer": "Daalụ"},
+    {"question": "Translate 'house' to Igbo.", "answer": "Ụlọ"},
+    {"question": "What is the Igbo word for 'friend'?", "answer": "Enyi"},
+    {"question": "Translate 'water' to Igbo.", "answer": "Mmiri"}
+  ],
+  "Islamic Studies": [
+    {"question": "What is the Quran?", "answer": "The holy book of Islam."},
+    {"question": "Name one pillar of Islam.", "answer": "Shahada (faith)"},
+    {"question": "What is Salah?", "answer": "The Islamic ritual prayer performed five times daily."},
+    {"question": "Define Zakat.", "answer": "Almsgiving or charity required of Muslims."},
+    {"question": "What is Ramadan?", "answer": "The Islamic month of fasting from dawn to sunset."}
+  ],
+  "Yoruba": [
+    {"question": "Translate 'hello' to Yoruba.", "answer": "Bawo"},
+    {"question": "What is 'thank you' in Yoruba?", "answer": "Ese"},
+    {"question": "Translate 'house' to Yoruba.", "answer": "Ile"},
+    {"question": "What is the Yoruba word for 'friend'?", "answer": "Ore"},
+    {"question": "Translate 'water' to Yoruba.", "answer": "Omi"}
+  ],
+  "Pre-Vocational Studies": [
+    {"question": "Name one pre-vocational skill.", "answer": "Cooking"},
+    {"question": "What is basic carpentry?", "answer": "The art of constructing simple wooden items."},
+    {"question": "Define tailoring.", "answer": "The skill of making or altering garments."},
+    {"question": "What is soap making?", "answer": "The process of producing soap from fats and oils."},
+    {"question": "Name a simple electrical skill.", "answer": "Wiring a bulb"}
+  ],
+  "Business Studies": [
+    {"question": "Define entrepreneurship.", "answer": "The process of starting and running a business."},
+    {"question": "What is profit?", "answer": "The difference between revenue and cost."},
+    {"question": "Define marketing.", "answer": "The process of promoting and selling products."},
+    {"question": "What is bookkeeping?", "answer": "Recording financial transactions of a business."},
+    {"question": "What is a business plan?", "answer": "A document outlining business goals and strategies."}
+  ],
+  "Christian Religious Studies (CRS)": [
+    {"question": "What is the Bible?", "answer": "The holy book of Christians."},
+    {"question": "Name one commandment.", "answer": "You shall not steal."},
+    {"question": "Define prayer.", "answer": "Talking to God."},
+    {"question": "Who is Jesus Christ?", "answer": "The Son of God and Savior of mankind."},
+    {"question": "What is baptism?", "answer": "A Christian sacrament of initiation."}
+  ],
+  "History": [
+    {"question": "Who was the first President of Nigeria?", "answer": "Nnamdi Azikiwe"},
+    {"question": "When did Nigeria gain independence?", "answer": "1st October 1960"},
+    {"question": "Define colonization.", "answer": "The act of establishing control over another country."},
+    {"question": "Name one ancient Nigerian kingdom.", "answer": "Oyo Kingdom"},
+    {"question": "Who were the transatlantic slaves?", "answer": "Africans taken to the Americas for labor during the slave trade."}
+  ],
+  "Nigerian History": [
+    {"question": "When was the Nigerian Civil War?", "answer": "1967–1970"},
+    {"question": "Who is considered the father of modern Nigeria?", "answer": "Nnamdi Azikiwe"},
+    {"question": "What is the capital of Nigeria?", "answer": "Abuja"},
+    {"question": "Name one colonial power in Nigeria.", "answer": "Britain"},
+    {"question": "Who was Queen Amina?", "answer": "A Hausa warrior queen of Zazzau."}
+  ],
+  "Government": [
+    {"question": "Define democracy.", "answer": "A system of government where citizens elect representatives."},
+    {"question": "What is the function of the legislature?", "answer": "To make laws."},
+    {"question": "What is the function of the judiciary?", "answer": "To interpret laws."},
+    {"question": "What is the executive branch?", "answer": "The part of government that enforces laws."},
+    {"question": "Define federalism.", "answer": "A system where power is shared between national and state governments."}
+  ],
+  "Visual Arts": [
+    {"question": "Define painting.", "answer": "Applying paint to create artistic expression."},
+    {"question": "What is sculpture?", "answer": "Shaping materials like clay or stone into forms."},
+    {"question": "Name a color primary in art.", "answer": "Red"},
+    {"question": "What is perspective in art?", "answer": "Technique to show depth on a flat surface."},
+    {"question": "Define collage.", "answer": "Art made by assembling different materials onto a surface."}
+  ],
+  "Music": [
+    {"question": "Define melody.", "answer": "A sequence of musical notes that are pleasing to hear."},
+    {"question": "What is rhythm?", "answer": "The pattern of beats in music."},
+    {"question": "Name one musical instrument.", "answer": "Piano"},
+    {"question": "What is a chord?", "answer": "Combination of three or more notes played together."},
+    {"question": "Define tempo.", "answer": "The speed of the music."}
+  ],
+  "English Literature": [
+    {"question": "Who wrote 'Romeo and Juliet'?", "answer": "William Shakespeare"},
+    {"question": "Define protagonist.", "answer": "The main character in a story."},
+    {"question": "What is a poem?", "answer": "A literary work using rhythmic and figurative language."},
+    {"question": "Name a Nigerian author.", "answer": "Chinua Achebe"},
+    {"question": "Define metaphor.", "answer": "A figure of speech comparing two unlike things without using 'like' or 'as'."}
+  ],
+  "Home Management": [
+    {"question": "Define cooking.", "answer": "The process of preparing food."},
+    {"question": "What is hygiene?", "answer": "Practices to maintain health and cleanliness."},
+    {"question": "Name one household chore.", "answer": "Sweeping the floor"},
+    {"question": "What is budgeting?", "answer": "Planning how to spend money wisely."},
+    {"question": "Define laundry.", "answer": "The process of washing clothes."}
+  ],
+  "Catering Craft": [
+    {"question": "What is baking?", "answer": "Cooking food using dry heat in an oven."},
+    {"question": "Define plating.", "answer": "Arranging food attractively on a plate."},
+    {"question": "Name one kitchen safety rule.", "answer": "Keep knives away from children."},
+    {"question": "What is seasoning?", "answer": "Adding herbs or spices to enhance flavor."},
+    {"question": "Define menu.", "answer": "A list of dishes served in a meal."}
+  ],
+  "Biology": [
+    {"question": "What is a cell?", "answer": "The basic unit of life."},
+    {"question": "Name one organ in the human body.", "answer": "Heart"},
+    {"question": "Define photosynthesis.", "answer": "Process by which plants make food using sunlight."},
+    {"question": "What is DNA?", "answer": "Genetic material in living organisms."},
+    {"question": "What is an ecosystem?", "answer": "A community of living and non-living things interacting."}
+  ],
+  "Chemistry": [
+    {"question": "Define atom.", "answer": "The smallest unit of matter."},
+    {"question": "What is an element?", "answer": "A substance made of one type of atom."},
+    {"question": "Define molecule.", "answer": "Two or more atoms bonded together."},
+    {"question": "What is an acid?", "answer": "A substance that releases hydrogen ions in solution."},
+    {"question": "What is a base?", "answer": "A substance that releases hydroxide ions in solution."}
+  ],
+  "Physics": [
+    {"question": "Define force.", "answer": "A push or pull that changes motion."},
+    {"question": "What is gravity?", "answer": "A force that attracts objects toward each other."},
+    {"question": "Define energy.", "answer": "The ability to do work."},
+    {"question": "What is velocity?", "answer": "Speed in a specific direction."},
+    {"question": "Define mass.", "answer": "The amount of matter in an object."}
+  ],
+  "Agriculture": [
+    {"question": "Define crop rotation.", "answer": "Alternating crops to maintain soil fertility."},
+    {"question": "What is irrigation?", "answer": "Supplying water to crops."},
+    {"question": "Name a cash crop in Nigeria.", "answer": "Cocoa"},
+    {"question": "What is organic farming?", "answer": "Farming without synthetic chemicals."},
+    {"question": "Define compost.", "answer": "Decomposed organic matter used as fertilizer."}
+  ],
+  "Farther Mathematics": [
+    {"question": "Differentiate x^2.", "answer": "2x"},
+    {"question": "Integrate 3x dx.", "answer": "3/2 x^2 + C"},
+    {"question": "Solve for x: x^2 - 9 = 0", "answer": "x = 3 or x = -3"},
+    {"question": "What is sin(90°)?", "answer": "1"},
+    {"question": "What is cos(0°)?", "answer": "1"}
+  ],
+  "Physical Education": [
+    {"question": "Define aerobic exercise.", "answer": "Exercise that improves oxygen consumption."},
+    {"question": "Name one team sport.", "answer": "Football"},
+    {"question": "What is stamina?", "answer": "The ability to sustain physical effort."},
+    {"question": "Define flexibility.", "answer": "The range of motion of joints."},
+    {"question": "What is strength training?", "answer": "Exercises that increase muscle power."}
+  ],
+  "Health Education": [
+    {"question": "Define hygiene.", "answer": "Practices to maintain health and cleanliness."},
+    {"question": "What is vaccination?", "answer": "Injection to prevent disease."},
+    {"question": "Name one nutrient.", "answer": "Protein"},
+    {"question": "Define first aid.", "answer": "Immediate care given to a sick or injured person."},
+    {"question": "What is a balanced diet?", "answer": "A diet containing all essential nutrients in correct proportions."}
+  ],
+  "Food & Nutrition": [
+    {"question": "Define carbohydrates.", "answer": "Nutrients that provide energy."},
+    {"question": "What is protein?", "answer": "Nutrients that help in body repair and growth."},
+    {"question": "Define vitamins.", "answer": "Organic compounds essential for health."},
+    {"question": "What is fiber?", "answer": "Indigestible part of plant foods that aids digestion."},
+    {"question": "Give one source of calcium.", "answer": "Milk"}
+  ],
+  "Geography": [
+    {"question": "What is latitude?", "answer": "Distance north or south of the equator."},
+    {"question": "What is longitude?", "answer": "Distance east or west of the prime meridian."},
+    {"question": "Define climate.", "answer": "The average weather conditions of a place."},
+    {"question": "Name a river in Nigeria.", "answer": "Niger River"},
+    {"question": "What is a desert?", "answer": "A dry area with little rainfall."}
+  ],
+  "Technical Drawing": [
+    {"question": "Define scale in technical drawing.", "answer": "A ratio of a drawing to the actual object."},
+    {"question": "What is an orthographic projection?", "answer": "A method of representing 3D objects in 2D."},
+    {"question": "Define isometric drawing.", "answer": "A 3D drawing where axes are at 30° to the horizontal."},
+    {"question": "Name a drawing tool.", "answer": "Compass"},
+    {"question": "Define dimensioning.", "answer": "Specifying the measurements on a drawing."}
+  ],
+  "Accounting": [
+    {"question": "Define asset.", "answer": "Resources owned by a business."},
+    {"question": "What is liability?", "answer": "Obligations owed by a business."},
+    {"question": "Define revenue.", "answer": "Income earned from business activities."},
+    {"question": "What is expense?", "answer": "Cost incurred in running a business."},
+    {"question": "Define capital.", "answer": "Money invested in a business."}
+  ],
+  "Commerce": [
+    {"question": "Define trade.", "answer": "Buying and selling of goods and services."},
+    {"question": "What is import?", "answer": "Bringing goods from another country."},
+    {"question": "What is export?", "answer": "Sending goods to another country."},
+    {"question": "Define retail.", "answer": "Selling goods directly to consumers."},
+    {"question": "Define wholesale.", "answer": "Selling goods in bulk to retailers or businesses."}
+  ],
+  "Marketing": [
+    {"question": "Define marketing.", "answer": "The process of promoting and selling products."},
+    {"question": "What is advertising?", "answer": "A way to promote products to customers."},
+    {"question": "Define brand.", "answer": "A name or symbol identifying a product."},
+    {"question": "What is market research?", "answer": "Gathering information about consumers and competitors."},
+    {"question": "Define target audience.", "answer": "A specific group of consumers a product is aimed at."}
+  ],
+  "Economics": [
+    {"question": "Define supply.", "answer": "Quantity of goods available for sale."},
+    {"question": "Define demand.", "answer": "Quantity of goods consumers want to buy."},
+    {"question": "What is inflation?", "answer": "A rise in general price levels."},
+    {"question": "Define GDP.", "answer": "Gross Domestic Product; total value of goods and services produced."},
+    {"question": "What is scarcity?", "answer": "Limited availability of resources."}
+  ],
+  "English Language": [
+    {"question": "Define sentence.", "answer": "A group of words expressing a complete thought."},
+    {"question": "What is a pronoun?", "answer": "A word that replaces a noun."},
+    {"question": "Define conjunction.", "answer": "A word that joins words or sentences."},
+    {"question": "What is punctuation?", "answer": "Marks used to clarify meaning in writing."},
+    {"question": "Define adverb.", "answer": "A word that modifies a verb, adjective, or another adverb."}
+  ],
+  "General Mathematics": [
+    {"question": "What is 25 ÷ 5?", "answer": "5"},
+    {"question": "Solve: 3x - 7 = 2", "answer": "x = 3"},
+    {"question": "What is 15% of 200?", "answer": "30"},
+    {"question": "Simplify: 4 + 3 × 2", "answer": "10"},
+    {"question": "What is 9 squared?", "answer": "81"}
+  ],
+  "One Trade subject": [
+    {"question": "Name a trade skill.", "answer": "Welding"},
+    {"question": "Define plumbing.", "answer": "Installing and repairing pipes."},
+    {"question": "What is electrical wiring?", "answer": "Connecting electrical components safely."},
+    {"question": "Name a carpentry tool.", "answer": "Hammer"},
+    {"question": "Define tailoring.", "answer": "Making or altering clothes."}
+  ],
+  "Citizenship and Heritage Studies": [
+    {"question": "Define citizenship.", "answer": "Being a legal member of a country."},
+    {"question": "What is heritage?", "answer": "Traditions and cultural values passed down from ancestors."},
+    {"question": "Define civic duty.", "answer": "Responsibilities of citizens to society."},
+    {"question": "Name one Nigerian national symbol.", "answer": "Nigerian flag"},
+    {"question": "What is the importance of respecting laws?", "answer": "Maintains order and justice in society."}
+  ],
+  "Digital Technologies": [
+    {"question": "Define the internet.", "answer": "A global network connecting computers."},
+    {"question": "What is a computer virus?", "answer": "Malicious software that damages systems."},
+    {"question": "Define hardware.", "answer": "Physical components of a computer."},
+    {"question": "Define software.", "answer": "Programs that run on a computer."},
+    {"question": "What is a smartphone?", "answer": "A mobile device with computing capabilities."}
+  ]
+}

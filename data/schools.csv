@@ -1,31 +1,373 @@
 id,name,region,device_type,connectivity
-f7e43711-27c7-4d70-be94-9447a62d0525,Akinwale College,Ibadan,desktop,online
-a227c995-fae6-4571-9ad0-de9d89b5b461,Okafor College,Kano,tablet,online
-74931cd6-6a22-424b-83a6-13c921ef2bcb,Okonkwo College,Enugu,laptop,intermittent
-89056865-9b7e-4dee-9b76-a42aced62e82,Abiola College,Port Harcourt,desktop,offline
-af91eb27-73ee-4cad-8399-ba4fb4fc920c,Abiola College,Abuja,laptop,intermittent
-67ca4473-4e34-4cf8-940d-3ca919782ee0,Ekwueme College,Enugu,desktop,online
-57b9e710-2d2e-4a04-9b8b-f09065fdcfd5,Obasanjo College,Enugu,laptop,intermittent
-b0ff8174-29fa-4bbd-b775-11520261e01a,Adeyemi College,Enugu,tablet,intermittent
-4a9a785e-ca16-49bd-946f-8f8091a415ff,Uche College,Kano,tablet,online
-f89ef774-e66b-43db-abc7-a9c38c45a170,Obasanjo College,Enugu,desktop,online
-075ab80f-34c0-4032-b37f-e71569d8a4ad,Okonkwo College,Kano,tablet,offline
-75d659a9-c881-4186-9cf6-6d8164147db8,Ogunleye College,Port Harcourt,desktop,intermittent
-484f473e-3561-4253-9902-1cfac6fb2524,Okonkwo College,Lagos,tablet,online
-09cfe5e3-8212-46fd-9187-f900badf55d7,Oshodi College,Abuja,laptop,intermittent
-7c59bbc1-16c8-44e3-add2-d6d30882e6cd,Obasanjo College,Lagos,tablet,intermittent
-e57a436c-10ad-438e-944b-9330f8f167e3,Olawale College,Ibadan,laptop,intermittent
-fdd6fcc7-7e25-4259-8b02-680a63f964b4,Obi College,Ibadan,tablet,online
-45299656-229f-4c35-bd3e-f6c247d38c68,Obi College,Ibadan,tablet,offline
-e8d59e53-ff7e-4392-8527-139c45de49ee,Uche College,Kano,tablet,offline
-a6ac8320-36d3-423a-b81f-93c5897415eb,Olawale College,Abuja,tablet,intermittent
-80648901-c197-44b5-bd5f-e5c4544dc5f3,Balogun College,Lagos,desktop,intermittent
-c14a4e30-1aa5-4f93-95c0-3790e4e01b85,Uche College,Port Harcourt,laptop,offline
-154c68b5-d89a-4e23-9ab0-287cb3ba8988,Oyekan College,Port Harcourt,tablet,intermittent
-4ee4b411-beba-497e-91ed-5340d3bbcb73,Akinwale College,Enugu,laptop,offline
-0c0df885-8770-4493-889e-515d3b5f511c,Uche College,Kano,tablet,online
-576add09-5a4c-497b-b2a3-c9e5f89d5d63,Uche College,Ibadan,laptop,online
-6a94ce44-7c41-445a-95f4-f7e5f14db1cf,Ekwueme College,Abuja,tablet,online
-d95edb63-a876-434d-9cfa-5de41840f04e,Olawale College,Port Harcourt,tablet,intermittent
-27061aa7-e872-4b8b-85de-94487d694153,Eze College,Port Harcourt,laptop,intermittent
-548f4551-e04b-454e-9956-ac423e4684e6,Chukwu College,Lagos,desktop,intermittent
+2f6688d2-90cb-4c51-8ca5-2c221f2d925c,Patience Memorial School,South East,desktop,offline
+e8fbeea1-90c5-48e4-a5ec-9241750b6ebb,St. Balogun High School,North West,tablet,intermittent
+016b6406-73f7-4327-abef-ddd2a4def814,Ekwueme Secondary School,South West,desktop,intermittent
+5fc6a40e-d267-424b-899b-6b2d02f63eb7,Mary Memorial School,North East,tablet,intermittent
+8f3a120e-17f2-46d2-beb2-8b18d0baeb5c,Joseph Secondary School,South West,laptop,intermittent
+4176db92-36bb-4b45-b0f4-1cfb7986fdc0,Balogun Comprehensive School,North Central,laptop,offline
+b520ced7-9472-4876-829f-338eab6a8068,"Command Secondary School, Esther",South East,tablet,intermittent
+010d4c0d-3009-4c5f-ab4f-0d0b5c061079,Agnes Grammar School,North East,laptop,intermittent
+2db3a65e-3c3b-435a-aca0-5fb8cbca3dee,Adeyemi Comprehensive School,North Central,laptop,intermittent
+fd052033-74a8-4d55-9e22-b7539a555369,"Command Secondary School, Esther",South East,desktop,offline
+61b93048-87a6-4d7e-925e-741b2c73f53c,Ogunleye Grammar School,South South,tablet,offline
+20db00e1-b11c-49ab-94c3-2aaf53c33e8b,Chukwu Comprehensive School,North East,desktop,offline
+8b32968b-35f0-47ee-b14f-d69ed9a54598,Benjamin Memorial School,North East,tablet,offline
+6b5fb8f8-121f-46db-a620-16fd539407a0,"Command Secondary School, Patience",South West,desktop,offline
+57256db8-c2e6-4508-8ee9-28a7d2db2fd7,Angela Secondary School,South South,tablet,online
+3d14341d-ae4f-4ff1-a36b-720a7b17844d,St. Olawale High School,South East,laptop,offline
+32901101-9589-418a-b725-8c2f316dd37a,Agnes Memorial School,North West,laptop,intermittent
+e7965a78-f751-490e-a622-3a3902128250,Esther Academy,South East,tablet,offline
+a77c3b1c-f136-4ace-8b2f-d7c3908e3e57,Eze Grammar School,North East,laptop,offline
+c7571a4f-0106-4374-88d7-2b8ae444aecf,Mary Comprehensive School,South West,desktop,online
+edbbe4d7-7fca-47f3-9daf-729679ba5036,Ojo College,South West,laptop,online
+b356c184-c45d-4135-9840-efb70b615f31,Comfort College,South West,tablet,offline
+4a62b11f-bda6-4d0d-8092-ee7bc9bd4853,Akinwale Secondary School,South South,tablet,offline
+01fb29e4-642e-4643-89a7-0988e71bc20c,"Federal Government College, Charity",North Central,laptop,online
+2d24ed42-2da4-40c2-9060-b3cebcb07112,Okonkwo Academy,South South,desktop,intermittent
+79222056-7c01-477e-bbd0-c0a93a257819,Peter College,South East,laptop,offline
+f0151f1f-b2a7-4418-b9a4-00ec63ea2929,Mary Comprehensive School,South South,laptop,intermittent
+596a2850-b7ef-493d-abe0-5c51723553c5,Benjamin Memorial School,North West,tablet,online
+9a063271-9115-434e-8210-23826251ef61,"Federal Government College, Andrew",South East,laptop,intermittent
+093b8160-d893-42f6-bb8c-cf4fc762d660,"Federal Government College, Uche",South South,desktop,online
+6fff6f08-c93d-4434-bd39-24460bf969e2,John Secondary School,North East,tablet,intermittent
+c5eb35b6-58f0-4f4d-9e70-871dc24a45fa,Stephen Comprehensive School,South West,desktop,offline
+045c4be0-53d0-4688-aa21-c7998c8c1485,St. Adeyemi High School,North West,desktop,offline
+0ff8f29d-1359-4d0b-8364-072ca94d86f7,"Command Secondary School, Chukwu",South West,tablet,online
+0ee0e994-36c6-4df4-80d4-16db653856be,"Federal Government College, Ekwueme",North East,laptop,offline
+cd16901a-c0ee-4387-87eb-13162369c407,Obasanjo College,North Central,laptop,online
+faead8d3-c6e2-46df-bab3-a4f2cbd63be3,Adetokunbo Comprehensive School,North West,tablet,offline
+ebe316e1-4328-408d-835a-678494fc2b9f,Juliet College,South West,laptop,online
+de4be375-fb15-4526-a35b-07b39592e083,Comfort Secondary School,South East,desktop,offline
+f965a160-0824-46e7-a672-5b5aca9e9e4d,Adeyemi Memorial School,South West,desktop,intermittent
+509f74f4-caa7-45ce-985a-1325a1976270,Oyekan College,South West,tablet,online
+b42c49fa-b54c-4569-8621-d0cc5fc12269,Ruth Secondary School,South West,tablet,online
+76472755-0007-497f-96ea-894a3b34a2de,Simon Academy,South East,laptop,online
+6625ea49-7d06-483e-9bf7-54a7f9ad15ca,Ibrahim College,South East,desktop,intermittent
+5e68f81f-8ec0-4563-978a-fcd68d845822,Peace Grammar School,South East,tablet,online
+2dc2a0cf-c83f-48fd-8e88-46fdc81e93d4,Simon Academy,South West,laptop,intermittent
+40486971-5065-4b73-9c46-27829db60b33,Ojo Academy,South West,desktop,online
+36d4b093-5085-4601-b39a-47ae89081c64,Nnamani Grammar School,North Central,laptop,intermittent
+6b7d9589-667c-4533-843c-42738baa4147,"Federal Government College, Chukwu",South East,desktop,online
+fc91f28d-089e-496e-b514-90d7df681923,Victoria Academy,South South,laptop,offline
+460ed641-aa21-4e90-b1b6-b3ae3e63f06c,Deborah Secondary School,South East,tablet,offline
+9a274e43-2cd1-4058-8b77-9689f2f464d7,Hope Secondary School,North Central,laptop,intermittent
+2a41526d-1d73-4a07-9a1c-6fa0137e75c8,Gabriel College,North East,laptop,offline
+401e2e63-0345-4e6a-a5f1-3cba0657abdc,Oshodi College,South West,laptop,intermittent
+f9e955ec-73d8-43bb-80d7-35d4ff58ab32,St. Sarah High School,North Central,laptop,intermittent
+ac562a12-0506-44d4-9e54-e0ae0fb4e7a8,St. Uche High School,South West,tablet,online
+c9b4d49e-9160-4706-89ee-ffafc8c7a21b,Okafor Comprehensive School,North Central,desktop,online
+49c7ab4f-a065-4399-a25e-d4345fb9e7af,"Command Secondary School, Ojo",North East,laptop,offline
+34a96e58-0a1e-4917-9ff5-4e5b7c9208ff,Joshua Comprehensive School,South South,tablet,intermittent
+8355f3d7-553f-42bf-90a3-aa0fe2263835,Obasanjo Secondary School,South East,laptop,offline
+28ceea98-3c57-4740-bffc-7372bc7d53d4,Chukwu College,South West,tablet,intermittent
+4de095b9-f2bd-4087-bae0-3cf5da79f853,"Command Secondary School, Stephen",South West,desktop,online
+2fde62b4-7632-480a-95c4-09219143ef09,Juliet Secondary School,South South,desktop,intermittent
+1fb6911f-73a1-4fbe-ab50-252b4c51541d,Joshua Memorial School,North East,laptop,offline
+ac0eb0a7-4e56-4320-b959-03d09d60b906,"Federal Government College, Oyekan",North East,desktop,intermittent
+43b463d2-dc93-418b-97c9-4674f8ef2980,"Federal Government College, Nnamani",North East,laptop,intermittent
+92c4139a-d105-413e-bcf3-8f2821b4c36d,Oyekan Memorial School,North East,laptop,offline
+34859581-36f8-4209-b6c1-40ab9998a6de,Peace Grammar School,South West,laptop,online
+4c5a6351-55e9-4670-b70c-6c3486a6e1a6,"Federal Government College, John",South East,desktop,offline
+c71ac695-c8bc-4093-9709-d7e94ceec412,Daniel Grammar School,North Central,laptop,online
+e80d7a45-9fb2-4e1f-9593-25e0fb85da0a,Obi Memorial School,North Central,desktop,online
+3cfcd264-de51-4f70-8b18-6ccde690a090,Adeyemi Comprehensive School,North West,laptop,offline
+905f9f02-1319-4acc-9ed7-665b47bb9a01,St. Mary High School,South West,tablet,online
+35d31524-bffb-4325-8b33-5f22fb66fb97,Esther Comprehensive School,North West,laptop,intermittent
+14a37c09-020f-4dc7-b538-c57b01566465,"Command Secondary School, Comfort",North Central,desktop,online
+b337ea31-7fd0-4dfd-a7af-b4d2c8d37679,"Command Secondary School, Cornelius",North Central,tablet,online
+3d05c8d6-91c1-4f88-bb64-54e3016f53f8,"Command Secondary School, Agnes",South West,tablet,intermittent
+d74a4e5f-5223-4c8b-9ecc-177784f7676c,John Grammar School,North Central,tablet,online
+7e888463-c1bc-48dc-a989-ff6b810e0b02,Oyekan College,South West,laptop,online
+e1c203eb-8222-44b0-9624-59d04cbd19ce,Angela Grammar School,North East,laptop,offline
+5651c1c7-d07b-464f-a72a-71cb0f4d4958,"Command Secondary School, Philip",North West,laptop,offline
+c1c103c5-0505-49ec-a488-e7bc21e9e075,Nathaniel College,South East,laptop,intermittent
+f7d6f3ad-2f24-4026-92a1-38501c997b91,Joshua Memorial School,North Central,laptop,offline
+f6fb7e9e-4445-48f2-aac5-d0f4e1e8b88a,Simon Grammar School,North East,tablet,offline
+3c64a32e-c581-4d3b-bffa-829df0585255,"Command Secondary School, Juliet",North West,desktop,online
+48f7844c-099b-4db1-9bb5-022428cafca7,Stephen Grammar School,North West,laptop,online
+572f587c-f2c3-43ba-9a03-a190999d6e8e,Obi Memorial School,North East,desktop,offline
+44b930f1-cd59-4355-9fc6-01d7a9c6af00,Gloria Academy,North West,desktop,offline
+c236e0fc-60f8-416e-8dea-298462bfdd5b,Victoria Memorial School,South West,desktop,intermittent
+7dcb4472-642b-4d82-b5fa-904a96a07ec4,St. Ogunleye High School,South South,laptop,intermittent
+fdfa27be-2c91-4342-9ea9-9e9c8dd72725,Akinwale Memorial School,North East,laptop,online
+1adae500-8fa7-493a-8cc7-144f4d9f9559,"Command Secondary School, James",North West,desktop,offline
+fdb79794-63a5-4e42-957b-afcccbbfa092,Nnamani Memorial School,South East,laptop,intermittent
+7550e348-30c8-4619-ae28-c0da849ccf54,Paul Grammar School,North West,tablet,offline
+4adca4c4-fe65-45ec-92ec-04889b7a4551,Paul Memorial School,South South,tablet,offline
+9b45145c-39ea-456b-a55b-9d3837beefa3,"Federal Government College, Grace",North East,tablet,offline
+9ff9b7cc-d5e7-4d68-8543-418c8ef5e745,Mark College,North East,tablet,offline
+e464b44e-d08b-4e86-b08b-898e1a45ae8c,Patience Grammar School,North Central,tablet,intermittent
+92688f17-eae9-4ed7-8179-80520f3a08f6,Akinwale College,North West,laptop,offline
+184eb4a5-46a1-4ea0-8492-8c13ce5d0e8b,"Command Secondary School, Charity",North West,desktop,offline
+5a71ac5e-218d-4408-9672-af87f2c708bb,Ogunleye College,North East,laptop,intermittent
+a2f10361-c9d3-4f42-8503-71ced1fd73c2,Daniel Memorial School,South West,laptop,intermittent
+5799c530-99d0-4812-ae85-41f53dda32ea,"Command Secondary School, Philip",South East,tablet,online
+43f72c12-206e-44da-aa7e-e70f8a48b90b,St. Eze High School,South East,desktop,intermittent
+7da1faa5-215b-49e9-8e4b-411cab820118,Juliet Comprehensive School,North East,tablet,offline
+987b856d-774e-42b5-b7a8-e3bc88bb9e0d,Elizabeth Academy,South East,desktop,offline
+47f37abe-963f-4908-8d87-83e8b8f1b237,Comfort Grammar School,South East,laptop,intermittent
+784b5df6-7ba9-41fd-9f07-6ee6974f3a79,Obasanjo College,North East,laptop,offline
+47c0b261-9f5e-4c70-95c2-f921b63ccc8f,Mark Memorial School,South East,tablet,intermittent
+50db21c1-6b5a-40bf-85be-4a78f1b43ead,Eze Secondary School,South South,laptop,intermittent
+fda369ea-8889-4440-9e82-419d4786b96d,Gabriel Memorial School,South West,tablet,intermittent
+ae96c64d-4b29-4534-869b-f9d95e16d874,Cornelius Secondary School,South West,tablet,offline
+965597c2-368e-4fbd-8281-c8dcd8c3f4db,Comfort Academy,North Central,tablet,online
+1d0d8e77-53d7-495c-8a5b-0a391038806d,"Federal Government College, Esther",North East,laptop,intermittent
+9d5a13f8-f6ff-41ad-9480-9400e7feac2a,Adetokunbo Secondary School,North East,desktop,offline
+1f437797-eadc-48ce-af80-3b19e40ab907,Cornelius Grammar School,South West,desktop,online
+60129950-64fa-4d0b-9f75-c7a3e09c82fd,Balogun Memorial School,South West,laptop,online
+a2bd5a68-50ef-45c2-921d-aad4f3897f26,"Federal Government College, Grace",South East,desktop,intermittent
+003e92c4-a362-4fd4-9833-49865a18fe98,Uche Memorial School,South East,laptop,online
+a5ff3830-f8f2-4497-9230-6902912aaca8,Abiola Academy,South East,laptop,online
+0a9d673f-c204-4dc2-8a22-5840021b2c26,"Command Secondary School, Daniel",North Central,tablet,online
+7ba97334-9af0-44c7-a189-5d3f22982a76,Gabriel Secondary School,South South,tablet,online
+1ea5a4ed-e139-42c3-a6b6-4e174ae96a67,St. Philip High School,North East,laptop,offline
+7805b647-8ab5-495b-a05c-3d55acca0b4c,Akinwale College,North East,tablet,online
+9a31a2d2-1e88-45bd-a125-be7e7f834818,Ojo Comprehensive School,South West,laptop,online
+dd550b9a-a157-4424-be70-084a75c8d4f2,Elizabeth Comprehensive School,South South,tablet,online
+70e7d643-5b35-4263-a5e2-28a743ce3c11,"Command Secondary School, Deborah",North East,tablet,intermittent
+a8694ac4-8543-4656-ad01-19feeacc85d5,Ruth Memorial School,South South,laptop,offline
+2ee07938-f7c7-44e8-aa92-56d62fb1df85,St. Simon High School,South East,laptop,offline
+35470a89-7879-4ef9-b7ef-9c1d6573835e,Oyekan Secondary School,South East,desktop,intermittent
+fd437d64-468c-435b-a4fd-61593e2a018e,Olawale Academy,North East,laptop,intermittent
+b57b1d56-29ad-4ffb-b11b-060918743b7b,Elizabeth Comprehensive School,North East,desktop,intermittent
+b1d382ca-90b9-40d5-aa18-76aa9f534477,"Federal Government College, Abiola",North Central,desktop,offline
+fbcb701c-6a24-45f3-b314-f999a9da2f1d,Andrew Memorial School,South West,desktop,online
+cb4bd105-7ff0-45b5-9566-5c01f3724068,Victoria Secondary School,North Central,desktop,online
+3b1063dc-f274-40c9-a88c-6e43eee3e9ad,Peter Grammar School,North East,tablet,online
+6da08453-1acd-4ae1-9f25-d4c746b43e16,Joshua Secondary School,North West,laptop,offline
+084430d0-377d-4fb8-a3fc-553769c469d4,Sarah Grammar School,South West,desktop,offline
+d9a920a4-ec7c-4ac6-8c69-4154b64e9de8,St. Ekwueme High School,North Central,tablet,online
+241feb3d-4fe9-4b79-b19d-fbda5af2ad82,Uche Grammar School,North Central,desktop,online
+4e3c37d0-f44c-443e-8567-e19a77db90e8,St. John High School,South South,tablet,online
+34ca4cf8-2fe7-443d-8468-bf45f8b2233a,Elizabeth Comprehensive School,South South,desktop,intermittent
+a981c180-ed08-43d9-b039-34df4153efda,Sarah Academy,North East,desktop,online
+b857ad71-173f-43a0-b9bd-5266e62d0a73,Faith Academy,North Central,desktop,online
+f098b605-83b1-4abd-aca5-e95fa9db3ad1,"Command Secondary School, Joy",South West,laptop,online
+f775b1eb-5be1-4b56-a11b-3a44f7d17dc6,"Command Secondary School, Ibrahim",North East,tablet,offline
+c504fc3f-f6aa-4992-8c36-93fe4b78ad9e,Eze College,South West,tablet,offline
+9968c652-b89d-4458-ad0d-40b257d9d9d6,Balogun Secondary School,North West,desktop,intermittent
+d4a0d826-9f59-4e79-a9d4-a5c9c1e015ac,Ogunleye Memorial School,South South,desktop,online
+93abc62f-a730-486a-9952-0e64ff0d473c,Oyekan College,North West,laptop,offline
+903751be-8fc0-46a8-aa7b-49fb10a04b4e,Stephen Academy,South West,laptop,online
+73fd08a4-14b6-43e3-830c-ffc4c8d794ba,St. Michael High School,North Central,tablet,online
+2dce2d9c-65ed-4ac8-aa05-1846d98fe0e8,Balogun Comprehensive School,North West,desktop,intermittent
+a546efc1-be0e-4dde-8554-c8a49d3ac7e8,St. Obi High School,North Central,desktop,online
+0659fb57-5432-4180-82c7-14594f5440a0,"Command Secondary School, Chukwu",North Central,laptop,intermittent
+5c4069b4-bec9-46b7-8829-a4255834a524,Cornelius Secondary School,South West,tablet,offline
+95d4a2d9-5499-468e-9122-134e9d61bcc6,Sarah Grammar School,North West,laptop,offline
+16eeee76-d798-4069-b4ca-64a4149431cc,Ibrahim Grammar School,North Central,desktop,online
+b92c3d01-6796-4464-8b13-a0a3091ce4d0,"Federal Government College, Andrew",North East,tablet,intermittent
+7df318a2-1d00-4d4b-be7e-16b7751a144f,"Command Secondary School, Chukwu",North Central,desktop,intermittent
+469cbe1b-a7c8-4c34-9379-4aaddf46eb65,St. Deborah High School,South South,tablet,intermittent
+d4a92239-fe0b-41e4-a5e5-0a668435fd8a,"Command Secondary School, Gabriel",North Central,laptop,intermittent
+901155c1-bd85-4bd5-9cf5-c1c4ec0b52f9,Benjamin Memorial School,South West,tablet,intermittent
+cb368583-a41f-41b0-a656-9f26a2cbe952,Okonkwo Secondary School,North East,desktop,offline
+13f82861-3df3-4a34-9f71-c7b1ffe59e57,Gabriel Academy,South South,laptop,intermittent
+e0c18247-cb98-4fbc-a00a-24c8d7c98608,Joshua Grammar School,North West,laptop,offline
+e3d1fabf-ae07-4981-bb0d-2a24db9d9746,"Command Secondary School, Simon",North East,tablet,offline
+0c7926f1-e7ab-4702-a02b-36fbe2883ff0,Ibrahim Comprehensive School,South West,desktop,intermittent
+f282db06-fb8a-45ad-8627-47c7ade85c70,Emmanuel Comprehensive School,North West,desktop,offline
+c9333eea-98d5-44a4-900e-fc0003239122,David Academy,South East,tablet,intermittent
+87653e21-8a21-4ea0-ac93-19ef0b649abd,Akinwale Academy,North West,laptop,offline
+fe3e522b-b7cc-4ccf-a758-61d1626470e9,Victoria Comprehensive School,North West,tablet,offline
+b9b09682-df19-4b66-a8a3-028c69921e4b,Daniel Secondary School,South West,desktop,online
+f2b81fbd-54da-4feb-8041-5f0c33fe6991,Chukwu Comprehensive School,South West,tablet,online
+654cbaa8-078a-4b8d-8f34-eca285464095,Eze Secondary School,North East,desktop,online
+e8186cc9-6701-4907-9f99-8bafe9e05adf,Balogun Memorial School,South East,laptop,offline
+de75ed12-7bfd-48a6-b89d-a23f1ae258af,St. Elizabeth High School,North West,laptop,offline
+9081ea5e-0e76-492a-b1b1-5dad7ad7d438,Joseph Comprehensive School,North Central,desktop,offline
+1c1668bc-08a9-4aef-beaf-b87b0ba99995,"Federal Government College, Akinwale",North Central,desktop,intermittent
+deb42578-acbc-41b7-b5ed-a878d4f6d618,"Federal Government College, Eze",South South,laptop,intermittent
+a22b42e2-7b3f-413c-b694-8b6bc4f25e99,Mary College,North East,laptop,offline
+2c723b11-1d38-44c8-b4df-68fb6167dfeb,James College,South South,desktop,intermittent
+16574075-e953-4fea-a8a9-f9f1809308db,Chukwu Academy,North Central,desktop,online
+c8258924-2738-4aa8-8c52-cb472d2f9554,"Command Secondary School, Mark",North East,tablet,offline
+5a6bfa62-e095-4602-9802-36f59d87b146,Philip Academy,North Central,desktop,online
+20f6df28-0064-47d1-98ce-09f5e17ef409,"Federal Government College, Akinwale",South East,laptop,online
+5e1656f0-730a-4e0c-a98e-bb6e675d9921,Ibrahim Secondary School,North Central,tablet,online
+963748c0-2bf1-41f6-b73b-fd026e7a559d,"Command Secondary School, Oshodi",South South,laptop,online
+f972e71a-e030-4dd9-908f-8de9c8e5a987,Obi Grammar School,North Central,tablet,offline
+446ffcbf-83b8-49bf-ae77-22fff9fc2297,Hope Secondary School,South West,laptop,online
+05bfd0f8-654a-4634-b39c-5548350fcac0,"Command Secondary School, Chukwu",South West,laptop,offline
+71097ad1-dac8-4529-a170-3011f9bcbcda,St. Akinwale High School,North West,laptop,offline
+d2d54790-74a2-425e-9752-4557e854c2e7,Charity Memorial School,South East,desktop,online
+a63a5bcb-db23-46db-8e90-b67155cf1c15,Agnes Academy,South South,desktop,offline
+b581c1d1-a9d8-4bf5-bca3-e403e3457ccd,Elizabeth College,South West,tablet,online
+72be5d08-8cb1-4e92-bdc6-21ffe0389698,Nathaniel Secondary School,North East,laptop,offline
+c18aea52-282b-401a-8397-e2325d04e8cc,Simon Secondary School,North Central,desktop,online
+2db37ab1-c0d1-4f46-ad63-451e73cc9a8a,Mark Academy,North West,tablet,online
+bfa3357b-804a-49ea-9766-efd3cc7c9391,Okafor College,North West,tablet,offline
+bc687147-a586-4a63-a5e0-e5cec19cc0a4,Benjamin Secondary School,South South,laptop,offline
+b1af2ab9-91f6-44c2-ad5e-71d82d1f051d,Adeyemi Academy,North East,tablet,offline
+80c508f8-528e-4259-b32f-1c2679437a3c,Emmanuel Memorial School,South South,desktop,online
+1481c5aa-28c6-4cea-a8d9-b1276a75be3e,Sarah Academy,North East,desktop,offline
+17723453-15c4-4edb-805d-962649ca6cc4,Ojo Grammar School,North East,tablet,offline
+cc601848-f25e-410c-ac01-2f5ab830ea96,"Command Secondary School, Ekwueme",South East,tablet,intermittent
+c50dfa13-e0c4-4298-aee9-02885f8959ef,St. Benjamin High School,South East,laptop,offline
+bb88aa31-f62a-437d-8fe7-f76b11dd8f73,Faith Grammar School,South West,laptop,online
+0a3d8077-748c-4bbe-9ba9-e25fe9f0c431,"Federal Government College, Obasanjo",North Central,laptop,online
+8c4b7fcf-4eb4-4865-8bb9-70aae651ed9f,James College,South South,desktop,offline
+dfb40be2-e94e-425a-9922-88dc43e6b215,Adeyemi College,North East,laptop,intermittent
+f2eb83a2-9f8c-4bf3-8ca7-100808f43ae3,"Command Secondary School, Sarah",South West,tablet,offline
+c7b78e81-a8f1-454c-942b-21f4606b3719,Andrew Secondary School,North East,laptop,offline
+e0f943de-c39d-4e28-a946-bd968afe42b5,Patience Academy,South East,tablet,online
+46f2b735-6d3b-4eb9-ac86-43ff5acf98a6,"Command Secondary School, Oyekan",South South,laptop,offline
+5283eb86-5be4-4060-9511-667153e471d7,Obi Memorial School,North Central,laptop,online
+3cbc1ae4-3739-4695-b32f-de6b3390b103,"Federal Government College, Ekwueme",North East,desktop,offline
+b66bf394-e37c-4bea-ba37-42a285ecb32f,Gabriel Comprehensive School,South South,tablet,intermittent
+74c7ddf0-be42-4155-a272-cfed43a7b5f5,Mark Comprehensive School,South South,desktop,offline
+16f8cd86-12d5-4292-973a-397149353eee,Ogunleye Grammar School,North West,tablet,offline
+74d900ac-c62f-49f6-94cb-9b6a5b064f68,Blessing College,North West,desktop,offline
+091fc732-149b-415b-9424-bf1e4ce0415e,Adeyemi Grammar School,South East,desktop,intermittent
+2a347a02-c3ea-4d76-9e14-a244245a2edc,St. Deborah High School,North West,tablet,offline
+d7163b93-f55c-4420-b558-8eb3e5743a3b,Mark Memorial School,South South,tablet,offline
+ab991b1c-95b4-40a1-abcf-10dcb670b20b,St. Nathaniel High School,North Central,tablet,online
+4e2e8ba0-f0c7-4706-8692-71fc1c82bf35,Simon Grammar School,South South,laptop,offline
+16cdcdec-14bd-4fd8-a12f-691296858f2b,Comfort Secondary School,North East,laptop,intermittent
+99ca9651-86fd-46c2-b271-cf43d60a3d9e,Juliet Academy,South South,laptop,offline
+a726dfc4-3302-40d9-a06b-f5c62af403ea,Paul Comprehensive School,North Central,desktop,online
+7044c715-5d14-436b-b46f-333f57a489ef,Faith Secondary School,North West,tablet,offline
+cf9e5231-0bdd-4210-8943-07b68f8293f1,Okonkwo College,South West,tablet,online
+4d65c85d-c0aa-45f1-929a-e70559aefb34,Ibrahim Secondary School,North East,laptop,offline
+60fec540-6fc9-4dc7-abe9-9d84fb3e7ab8,"Command Secondary School, Nnamani",North West,tablet,online
+3a53f250-4ef6-45da-a32b-2fd9b5034e60,Adeyemi Secondary School,North West,desktop,online
+13f08b9a-00a2-4691-826d-7f866b133123,Cornelius College,North East,desktop,intermittent
+a4038e69-3d89-4137-8235-1faeea2dee10,Victoria College,South South,laptop,online
+188cbea6-1305-4389-a0f5-2cc792cb76ce,St. Deborah High School,North East,tablet,offline
+2a00ebab-9df1-483d-b535-6b796de58566,"Federal Government College, Stephen",North East,desktop,intermittent
+c156d33d-9d92-4ca3-9d6d-72a49ef714f5,Paul Secondary School,North Central,desktop,online
+ec064e02-0019-4127-95a5-a5886a91ef66,Michael Memorial School,North East,desktop,offline
+48a4c39e-8d80-4904-8cb9-22b23edb8382,St. Obi High School,South West,tablet,offline
+a2b4254e-d858-4b9c-a643-c7830bdfd129,Elizabeth Memorial School,South West,desktop,online
+278a4216-f499-431f-b629-b91f7440ca84,Gloria Memorial School,South West,desktop,intermittent
+c8f21f5e-bdc5-429d-99b5-a919b1b0e4cd,Benjamin Secondary School,North East,tablet,offline
+bffdad7b-b966-4946-9ad6-c203f20319a8,Abiola Grammar School,North Central,laptop,online
+b04a16be-510f-48d5-9ee6-4f9c162bf061,Oyekan Memorial School,South West,desktop,online
+3cac6add-70f1-4696-9db5-d79946927032,St. Paul High School,South South,desktop,online
+79b8a337-f1fe-440b-a228-7d8f259a5e24,Abiola Comprehensive School,North East,tablet,offline
+f2297ecd-5ff2-4ae9-8d6d-c50af548ecf1,Simon Grammar School,North Central,laptop,intermittent
+4b4b8844-d913-4b2b-835d-80ca5679991a,"Federal Government College, Victoria",South South,tablet,intermittent
+39f8043c-245a-443e-beea-09cc30cc9ac9,Samuel Academy,North East,laptop,intermittent
+4adfd37d-4f69-4bef-9c35-12434877a10c,St. Ruth High School,South West,tablet,online
+3ea514a1-b5e4-4912-9bf2-efd872cac3a7,Peace Academy,North East,laptop,intermittent
+bd0c1cdc-498c-4528-9706-ad194dd6b86e,Juliet Secondary School,South West,tablet,intermittent
+20f1f966-1aa9-442a-8314-23b7ec0b5b54,"Federal Government College, Hope",North Central,laptop,online
+469e4db9-6255-4046-b310-e0e897f998c2,Adeyemi College,North East,tablet,offline
+ea2fcf02-3bba-4595-ab74-3ff60ffa484b,"Command Secondary School, Faith",North Central,laptop,online
+4b598d2a-5e86-4fd9-8f55-514a1eb402e9,Ruth College,North Central,tablet,online
+089b613f-414a-4f48-9747-4d9296b9fa3f,St. Nnamani High School,South East,desktop,intermittent
+5758f8e7-9deb-43ed-90cc-10c3bdde19b0,St. James High School,North Central,laptop,online
+98349591-f2a5-41af-be5b-4d6b1287cf87,Nnamani Grammar School,North East,desktop,intermittent
+e69f188f-d882-43c6-81be-f33ef955a264,Agnes Secondary School,South South,laptop,offline
+b5d6a8d5-002a-4c5b-8c2a-c16b3511d782,St. Obi High School,North East,desktop,offline
+9de15918-bce7-4d3d-a94f-28073826860a,Deborah Grammar School,South West,tablet,intermittent
+f0f2ae6d-4b42-4b0b-b6f5-5f452d7e9552,Gloria Grammar School,North West,tablet,offline
+c550d927-06bc-456e-9217-9dd4f453d220,St. Patience High School,North Central,laptop,offline
+c298d29b-f734-4704-81b3-dec693cdb072,Cornelius College,North East,laptop,offline
+37e862f8-24a0-46b1-8935-114b8af55b3e,St. Ojo High School,North East,tablet,intermittent
+de735487-5bb9-46ef-bc9a-8acbfc3d5acf,Adeyemi Comprehensive School,North Central,laptop,online
+cfe49452-0e59-4849-af33-25e6a72b72eb,Juliet Comprehensive School,South West,tablet,online
+3724f184-c052-4c22-bb0b-f016fc6c06db,Ibrahim Secondary School,North West,desktop,intermittent
+2ffd867b-95d7-4057-8063-d087f1be0470,Ekwueme College,South West,laptop,online
+8daf2174-dfec-42ca-8024-cc2758c3682c,"Command Secondary School, Blessing",South South,laptop,offline
+c0596933-7a79-4892-a365-a27d4a3991ac,"Command Secondary School, Obasanjo",North East,desktop,offline
+1cbe532a-8bed-4434-a8ca-6e1da82d9228,Abiola Memorial School,North West,tablet,intermittent
+bf06688a-9f72-431f-950d-b994d39bcb95,Oshodi Memorial School,North West,tablet,offline
+c0c85365-0065-430f-a29d-5842f2f88cdb,"Command Secondary School, Samuel",South West,laptop,online
+82325b9a-96d6-44d4-b6ed-33423456d7a1,Abiola Memorial School,North Central,laptop,intermittent
+5bec527c-0f6b-4f0e-b59d-861725aea293,St. Okonkwo High School,North East,laptop,online
+0430779d-a7e8-4684-a13d-45fe0a191d08,"Federal Government College, Okafor",North East,desktop,offline
+9d3914b6-9d76-4982-9c0d-33921dcde11e,"Command Secondary School, Angela",South West,tablet,offline
+269af390-7b4d-4957-badc-2c05526ebc64,"Federal Government College, Daniel",North West,tablet,offline
+feaa25a6-30e0-4b5f-9f30-1f288f53dfdb,St. Blessing High School,South East,laptop,online
+de986a99-a812-478e-a685-8cf6f802459d,Adetokunbo Secondary School,North East,tablet,online
+139dc393-1843-4d5e-8e6d-8a4933c01e88,Olawale Academy,North East,desktop,offline
+6140df0b-3383-46c5-96b1-5ca6227c983d,"Federal Government College, James",North East,desktop,offline
+beee47d3-22f8-4559-9b5f-bd4957055332,"Command Secondary School, John",North Central,desktop,online
+1d97ece6-3767-4bae-9aa8-cab99786b38b,Mark Academy,South East,laptop,online
+823a658d-b997-4734-96c3-f06160b82a4c,St. Benjamin High School,North Central,laptop,offline
+c0f54fe7-2c06-4cb0-8d79-c9f9892781fa,Esther College,South South,desktop,online
+886d64ff-82c7-4d54-86e3-bb937f4904d7,Abiola Grammar School,South West,desktop,online
+34ec2bbf-1af2-4f80-970f-5c229533430f,"Command Secondary School, Cornelius",North Central,tablet,intermittent
+69962c24-23f6-424f-9759-bcc88fbd81bb,"Command Secondary School, Benjamin",South South,tablet,intermittent
+91a1cdfc-3171-4b2f-8432-f8ca486df41f,Uche Comprehensive School,South South,laptop,offline
+6fc1ade8-9830-4445-9df1-c327866cb2c3,"Federal Government College, Oshodi",North Central,tablet,online
+1d05dd9b-6b5a-4ffc-8688-baf7115ee0cf,Angela Academy,North Central,laptop,intermittent
+603b72d8-8622-4b53-8df5-740f0e50d239,Comfort Comprehensive School,South West,tablet,intermittent
+281ea0fa-b6e8-4ce5-9e8a-4d8f4bf96115,"Federal Government College, Samuel",South East,tablet,intermittent
+47502469-1388-444f-b631-948186c2b8f2,Andrew College,North West,tablet,offline
+3db86dd5-2632-4801-ab2d-b32cb6b09e66,Hope Academy,South South,tablet,intermittent
+eb633380-27de-43bf-a095-7913c33d94a7,Juliet Memorial School,South West,desktop,online
+9ca9cc2b-fb24-4474-af6f-5996d4064858,Grace Secondary School,North Central,tablet,online
+59b4d96c-3268-4e95-9074-f89f547eaf2b,St. Emmanuel High School,South South,laptop,offline
+2a5c436a-3cb2-4017-acc1-8cca52bf8ca0,"Federal Government College, Obi",North Central,laptop,intermittent
+008beb1c-444d-465f-b026-c61fd161ca76,Ibrahim Academy,South South,laptop,offline
+0970a86d-6bcd-46ad-ac9c-e632e799e353,"Federal Government College, Joshua",North West,tablet,online
+291b0041-0ab7-4410-9e26-d1117f044022,Michael Memorial School,North West,tablet,intermittent
+7883eb4f-39d2-4a4c-b319-346aa26103c7,Peace Academy,South South,desktop,intermittent
+8ed1270b-6122-44e1-8c79-d906a66e93cb,Cornelius Academy,South East,laptop,offline
+72c62e15-fa31-44fd-8237-5580bf1f1286,St. Patience High School,North West,desktop,intermittent
+9ca17920-fc2a-46cd-bff8-a6295c54c0eb,"Federal Government College, Okonkwo",South West,tablet,offline
+db593d05-21ad-461b-b783-10b900033d25,"Command Secondary School, James",North East,laptop,offline
+e7953274-cf6f-4ef0-bd39-66d6e575459f,Victoria Secondary School,North Central,tablet,online
+30a6b115-1bfb-46cf-8350-3f9dc9a09991,"Federal Government College, Andrew",South West,tablet,offline
+ab8def18-6ec7-4523-9958-57588ff20ca8,Uche Academy,North Central,laptop,intermittent
+426c1cb6-c53b-4a4e-88da-d4f6d5d9071f,"Command Secondary School, Uche",South South,desktop,online
+1dc2a645-2835-42ca-bbeb-299ee0360f4a,"Federal Government College, Mark",North Central,laptop,intermittent
+885cab90-7ee1-443b-b5ed-eba38b6c8408,St. Juliet High School,North Central,desktop,offline
+4cd68675-6522-4e47-8022-8fd7c70d8297,Ruth Memorial School,North Central,desktop,online
+8cf9a879-e46e-476e-af13-af9b585973ed,Oshodi Comprehensive School,South South,laptop,intermittent
+16cdba5f-4482-4f9e-a45d-26dbd97c826b,Uche Comprehensive School,North West,laptop,offline
+b69f5798-9993-45cd-b8c1-b333f86d3422,St. Blessing High School,South West,tablet,offline
+7788f66e-fc1f-4877-8d0e-adc885d15d4d,"Command Secondary School, Joseph",North West,desktop,offline
+601e6cab-11b8-4722-8e24-0e5ed57111c9,Mark Academy,South West,desktop,offline
+eb4d2e20-7247-4832-a321-3d43b66d66a1,"Command Secondary School, Michael",South West,tablet,online
+e7728102-2859-48de-a2b1-e509943fc2e6,Ojo College,North Central,tablet,offline
+88d47f28-8794-4c0e-bb16-50559a54cc84,Peace Academy,North West,laptop,offline
+cbf5054d-cfe5-46b1-b333-063f198e9030,Oyekan Grammar School,South South,tablet,online
+03a1ead9-47a1-4105-bf5b-96f3881c361b,St. Patience High School,South East,desktop,intermittent
+9c7704ed-1262-4b9e-aaae-c7d55c45ac7e,Sarah Academy,South South,desktop,online
+24d9d8ed-7d4a-4e5e-9a40-cf92fb3854bd,"Command Secondary School, Juliet",North East,laptop,offline
+9a622927-1b9e-44a3-b5f5-3a5ef54abd3f,Adetokunbo Memorial School,South West,laptop,offline
+6332a4c0-9576-4648-9b5f-17cd8a8c44a8,Gabriel Academy,North Central,tablet,online
+37b1b5d8-6c7a-46f5-9b77-0f56d75555c0,Hope Comprehensive School,North Central,laptop,online
+72febe7a-6d5c-46d9-af3e-0d20ba6a4260,Philip Memorial School,North West,tablet,offline
+9a244818-481a-4048-9876-a879ffb23fd2,Comfort Grammar School,South South,desktop,offline
+3b17e759-80d7-4d20-b7b1-b964881e98a6,Samuel College,North Central,laptop,online
+61cc3808-3bfe-4326-a65f-8d83586864ed,Hope Grammar School,North Central,desktop,online
+98fb9c5d-1257-4432-924b-4bae9f44a9bc,Philip Grammar School,South East,desktop,online
+f7343888-bef3-4506-b2b1-e14ff5eb494a,"Command Secondary School, Esther",North East,desktop,online
+1e10ca35-ce20-4b5b-87b8-66c061a6e941,Obi Comprehensive School,South West,laptop,offline
+9e8508f6-aedc-4dce-8add-2405fc0e18cc,Chukwu Secondary School,South East,desktop,online
+2aea3096-6aab-432b-9f3d-0bc5486fb7e9,St. Abiola High School,North West,laptop,intermittent
+2626658b-a328-45c4-a40e-872241e0ec57,Oshodi Academy,North East,desktop,offline
+13381121-7514-44fb-bc7d-a7a0eb5d9c4a,"Command Secondary School, Blessing",North East,tablet,offline
+f6c60af1-2c44-4fc9-93a9-d873c0c886d2,St. Ruth High School,North East,tablet,intermittent
+cd2a2d6c-5d10-43d1-9e8c-0ead9b2c863c,David Comprehensive School,South South,laptop,offline
+4b5539ca-2bc9-48a1-8db5-d7cb68950647,Olawale Academy,North Central,tablet,offline
+fabe1019-f84b-45a0-a28f-6fdce8352a27,Juliet Memorial School,North West,tablet,offline
+d8eaed9e-54fd-4336-8059-2cd562e3fbdf,Joshua College,South West,tablet,online
+dd141208-f4ee-4bea-81d8-7ef7cc25072b,Peter Grammar School,North West,tablet,offline
+9fa8d230-fa47-41a7-9f40-c83983ec2c5d,St. Agnes High School,South East,laptop,online
+5f55fc41-b4d5-4cc8-a2eb-8673092a82ce,Ibrahim Memorial School,South East,laptop,intermittent
+e0fb2353-af8d-4d13-b1a4-33a696b74408,St. Andrew High School,North Central,desktop,offline
+c7dfc05e-3027-4128-a258-28785cc5d584,"Command Secondary School, Okonkwo",North East,laptop,intermittent
+6e617a92-9353-415c-9b61-968b53baae78,Oshodi College,South West,desktop,online
+be96b6cc-9682-4823-98b5-536400f1cd46,Simon Grammar School,South East,desktop,intermittent
+3b42d608-148d-4cdf-912c-6d00c1918819,"Federal Government College, Mark",North East,tablet,intermittent
+61b29303-c209-4601-9975-7303e75f377f,Eze Academy,South West,desktop,online
+59f4fc23-19ba-4136-b1b8-26f989ca3667,St. Ogunleye High School,North West,desktop,offline
+066b4ab1-805d-4bc1-af97-8c9b9574f5ae,Okafor Grammar School,North East,laptop,offline
+f9832540-7960-4226-aa8c-c337ba0d6d1d,James Memorial School,South South,laptop,online
+605c68be-122f-4b6c-b3f2-1637f4e12cc8,Benjamin Memorial School,South West,desktop,online
+57d64612-8f6f-49e9-8112-c42d1e9e4226,Joy Secondary School,South West,tablet,online
+8787a8ee-f278-453d-afa4-c957ddaa82b8,"Command Secondary School, Charity",South South,tablet,online
+65750c25-9c60-4bc5-99a1-80c199cccf58,David Grammar School,North West,laptop,offline
+fe810996-f9cf-439c-8fdb-1a2fc00bb526,St. Akinwale High School,South South,tablet,online
+fec02a2b-a4bd-4954-85cc-5c7cd892ce79,"Federal Government College, John",South East,laptop,intermittent
+44efaa63-a600-4881-8a1b-528dd618e87b,"Command Secondary School, Okafor",South West,tablet,online
+234ae5d2-b92b-4441-90ab-c69d177375ce,Ruth Comprehensive School,South South,laptop,offline
+d75cc7c3-c563-468b-b743-44a185c36d69,Oyekan Memorial School,North Central,tablet,offline
+12187c50-7cae-4b64-a7a3-6815b8f3c3a9,Chukwu College,South West,laptop,online
+38546d25-1644-4d5a-bb68-b54f9b9e7e81,Uche College,North East,desktop,offline
