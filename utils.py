@@ -10,8 +10,7 @@ load_dotenv()
 gemini_secret_key = os.getenv('GEMINI_SECRET_KEY')
 genai.configure(api_key=gemini_secret_key)
 
-# This function takes the chat history user can receive reminders (Quran, duaas, quotes)
-# based on their most recent conversation.
+# This function takes the chat history based on their most recent conversation.
 
 # Initialize chat_history OUTSIDE the function
 
@@ -205,4 +204,5 @@ def create_assessment(topic, subject, grade, no_of_questions):
         return response.text.strip()
 
     except Exception as e:
+
         return f"An error occurred while generating the assessment: {str(e)}"
