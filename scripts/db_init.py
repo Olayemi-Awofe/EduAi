@@ -108,4 +108,4 @@ class AuditLog(Base):
 # ---------- Create all tables ----------
 if __name__ == "__main__":
     Base.metadata.create_all(engine)
-    print(f"✅ Database created successfully at {DB_PATH}")
+    print(f"Database created successfully at {DB_PATH}")
