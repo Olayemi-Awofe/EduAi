@@ -7,7 +7,7 @@ This repository contains the Data Engineering backbone for the Teacher AI Copilo
 
 The objective is to build an AI-powered system that assists teachers in adapting to Nigeria’s new skill-based curriculum by generating lesson plans, teaching aids, assessments, and tracking teacher progress.
 
-As the Data Engineer, this repo focuses on designing, simulating, and managing all data operations — from database schema creation, to scrapping Nigeria Mininstry of Eduction web for the new curriculum,data developement, ingestion, and pipeline automation.
+As the Data Engineer, this repo focuses on designing, simulating, and managing all data operations, from database schema creation, to scrapping Nigeria Mininstry of Eduction web for the new curriculum,data developement, ingestion, and pipeline automation.
 
 ⚙️ End-to-End Data Engineering Workflow
 Step 1: Getting all the necessary data, scrapping Ministry of Education, And developing data to meet what we are buidling
