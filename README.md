@@ -2,7 +2,7 @@ Accelerating Educators – Data Engineering Setup
 
 # Overview
 
-This repository contains the Data Engineering backbone for the Teacher AI Copilot MVP — part of the DataFest Africa 2025 Hackathon project:
+This repository contains the Data Engineering backbone for the Teacher AI Copilot MVP part of the DataFest Africa 2025 Hackathon project:
 “Accelerating Educators: AI for Smarter Teaching”
 
 The objective is to build an AI-powered system that assists teachers in adapting to Nigeria’s new skill-based curriculum by generating lesson plans, teaching aids, assessments, and tracking teacher progress.
@@ -10,11 +10,9 @@ The objective is to build an AI-powered system that assists teachers in adapting
 As the Data Engineer, this repo focuses on designing, simulating, and managing all data operations — from database schema creation, to synthetic data generation, ingestion, and pipeline automation.
 
 ⚙️ End-to-End Data Engineering Workflow
-Step 1: Generate Synthetic Data
+Step 1: Getting all the necessary data, scrapping Ministry of Education, And developing data to meet what we are buidling
 
-Open and run notebooks/synthetic_data_dev.ipynb
-
-Each section creates data for a specific table:
+The specific table:
 
 Teachers 
 
@@ -30,10 +28,8 @@ Teacher Progress
 
 Audit Logs 
 
-Export each dataset to /data as CSV or JSON
 
-Tools: pandas, faker, numpy
-Purpose: simulate realistic, bias-free data that mimics real teacher, school, and classroom contexts.
+Tools: pandas, faker, numpy, Beautiful soup, sqlite, and many other.
 
 Step 2: Initialize the Database
 
@@ -61,18 +57,18 @@ audit_log
 
 Step 3: Ingest Data into the DB
 Run scripts/ingest_data.py
-Script reads generated CSVs and loads them into the SQLite database
+Script reads the scrapped and developed CSVs and loads them into the SQLite database
 
 Handles duplicate checks, schema validation, and type consistency
 
-Output: teacher_ai.db file stored inside /db folder.
-This file can be shared across teammates or regenerated locally using the same scripts.
+Output: edu_ai.db file stored inside /db folder.
+This file can be shared across teammates for developement and Repo.
 
 Step 4: Data Access & Collaboration
 
 The SQLite DB can be queried directly using:
 import sqlite3
-conn = sqlite3.connect("db/teacher_ai.db")
+conn = sqlite3.connect("db/edu_ai.db")
 
 
 Other team members (ML, Backend, or Frontend) can use this same DB file to build and test:
@@ -91,15 +87,25 @@ teacher_ai_project/
 │
 ├── db/
 │   ├── db_init.py              → Creates database schema  
-│   └── teacher_ai.db           → Generated SQLite database  
+│   └── edu_ai.db               → Generated SQLite database
+│   └── ingest_data.py          → ingest all the tables into SQLite database
 │
 ├── notebooks/
-│   └── synthetic_data_dev.ipynb → Synthetic data generation notebook  
+│   └── data_dev.ipynb          → Scrapper and Data dev notebook 
+│   └── curriculum.txt          → Numbers of curriculum scrapped from the Ministry of Education
+│   └── data_dev.ipynb          → Scrapper and Data dev notebook 
+│   └── testing.ipynb           → To test and query my DataBase
+│   └── questions_bank.json     → The question and answer of each subject scrap from the internet, exams bodies in Nigeria.
+
 │
-├── data/                       → Stores exported datasets (CSV/JSON)
+├── data/                       → Stores exported datasets (CSV/JSON/PDf)
+└── curriculum.pdf              → Stored the scrapped all Curriculums pdfs of each levels and subject.
+└── The .csvs                   → All the scrapped and developped data
 │
 ├── scripts/
-│   └── ingest_data.py          → Loads data into database  
+│   └── ingest_data.py          → Loads data into database
+│   ├── db_init.py              → Creates database schema  
+
 │
 └── src/
     ├── config.py               → DB connection & constants  
@@ -107,7 +113,6 @@ teacher_ai_project/
 
 Tech Stack
 Layer	Tools
-Data Generation	pandas, numpy, faker
 Database	SQLite, SQLAlchemy
 Scripting	Python 3.10+
 Notebook	Jupyter Lab / Jupyter Notebook
@@ -115,21 +120,7 @@ Version Control	Git + GitHub
 
 Collaboration Guide
 
-Each teammate clones the repo and runs the notebook locally.
-
-Everyone generates identical synthetic data by using the same random seed and Faker logic.
-
-The SQLite DB can be shared via GitHub or regenerated anytime.
-
-Output Deliverables
-
-teacher_ai.db — Final relational database file
-
-Synthetic CSVs/JSONs in /data
-
-Scripts for database build and ingestion
-
-Fully reproducible workflow for team integration
+The SQLite DB can be shared via GitHub.
 
 Author & Maintainer
 Data Engineer: Olayemi Olusegun Awofe
