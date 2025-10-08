@@ -71,7 +71,7 @@ async def ai_chatbot(request: ChatModel):
 
 # generate-lessons endpoint # Serve the lesson page
 @app.get("/generate-lessons", response_class=HTMLResponse)
-async def chatbot_ui():
+async def lesson_ui():
     lesson_file = "templates/lessons.html"
     if not os.path.exists(lesson_file):
         raise HTTPException(status_code=404, detail="Lessons file not found.")
@@ -80,7 +80,7 @@ async def chatbot_ui():
     return HTMLResponse(content=html_content)
 
 @app.post("/generate-lessons")
-async def monthly_weekly_goals(request: CreateLesson):
+async def create_lessons(request: CreateLesson):
     """
     Endpoint to process teacher input and generate lesson plan and teaching aid.
     """
@@ -119,4 +119,5 @@ async def generate_assessments(request: CreateAssessment):
         raise HTTPException(status_code=400, detail="All fields are required.")
 
     assessment = create_assessment(topic, subject, grade, no_of_questions)
+
     return {"assessment": assessment}   
