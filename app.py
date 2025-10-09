@@ -3,6 +3,17 @@ from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 from utils import *
 from fastapi.middleware.cors import CORSMiddleware
+from src.database import Base, engine
+from src.auth.routes import router as auth_router
+from src.school.routes import router as school_router
+from src.curriculum.routes import router as curriculum_router
+from src.lesson.routes import router as lesson_router
+from src.assessments.routes import router as assessments_router
+from src.teacher_progress.routes import router as progress_router
+import os
+
+# Initialize DB tables
+Base.metadata.create_all(bind=engine)
 
 # FastAPI app
 app = FastAPI()
@@ -29,12 +40,7 @@ class CreateLesson(BaseModel):
     grade: int
     duration_minutes: int
     lesson_outcome: str
-
-class CreateAssessment(BaseModel):
-    topic: str
-    subject: str
-    grade: int
-    mcq_count: int
+    no_of_questions: int
 
 # Serve the homepage
 @app.get("/", response_class=HTMLResponse)
@@ -69,55 +75,9 @@ async def ai_chatbot(request: ChatModel):
 
     return {"response": response}
 
-# generate-lessons endpoint # Serve the lesson page
-@app.get("/generate-lessons", response_class=HTMLResponse)
-async def lesson_ui():
-    lesson_file = "templates/lessons.html"
-    if not os.path.exists(lesson_file):
-        raise HTTPException(status_code=404, detail="Lessons file not found.")
-    with open(lesson_file, "r") as file:
-        html_content = file.read()
-    return HTMLResponse(content=html_content)
-
-@app.post("/generate-lessons")
-async def create_lessons(request: CreateLesson):
-    """
-    Endpoint to process teacher input and generate lesson plan and teaching aid.
-    """
-    topic = request.topic
-    subject = request.subject
-    grade = request.grade
-    duration = request.duration_minutes
-    lesson_outcome = request.lesson_outcome
-
-    if not topic or not subject or not grade or not duration or not lesson_outcome:
-        raise HTTPException(status_code=400, detail="All field are required.")
-    lessons = generate_lessons(topic, subject, grade, duration, lesson_outcome)
-    return {"weekly_monthly_goals": lessons}
-
-# generate-assessments endpoint # Serve the assessment page
-@app.get("/create-assessment", response_class=HTMLResponse)
-async def assessment_ui():
-    assessment_file = "templates/assessments.html"
-    if not os.path.exists(assessment_file):
-        raise HTTPException(status_code=404, detail="Assessments file not found.")
-    with open(assessment_file, "r") as file:
-        html_content = file.read()
-    return HTMLResponse(content=html_content)
-
-@app.post("/create-assessment")
-async def generate_assessments(request: CreateAssessment):
-    """
-    Endpoint to process teacher input and generate assessments.
-    """
-    topic = request.topic
-    subject = request.subject
-    grade = request.grade
-    no_of_questions = request.mcq_count
-
-    if not topic or not subject or not grade or not no_of_questions:
-        raise HTTPException(status_code=400, detail="All fields are required.")
-
-    assessment = create_assessment(topic, subject, grade, no_of_questions)
-
-    return {"assessment": assessment}   
+app.include_router(auth_router)
+app.include_router(school_router)
+app.include_router(curriculum_router)
+app.include_router(lesson_router)
+app.include_router(assessments_router)
+app.include_router(progress_router)
