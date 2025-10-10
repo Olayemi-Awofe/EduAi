@@ -2,6 +2,7 @@ from dotenv import load_dotenv
 import os
 import json
 import google.generativeai as genai
+import fitz  # PyMuPDF for PDF extraction
 
 # Load environment variables from .env file
 load_dotenv()
@@ -108,6 +109,7 @@ def chat_ai(message):
 # This function takes the teacher input and provides a structured lesson plan
 # and teaching aid to help teachers effectively deliver their lessons.
 
+lesson_history = []
 def generate_lessons(topic, subject, grade, duration, lesson_outcome):
     """
     Generates a detailed lesson plan and teaching aid based on teacher input.
@@ -156,43 +158,47 @@ def generate_lessons(topic, subject, grade, duration, lesson_outcome):
         ai_response = response.text.strip()
         clean_response = ai_response.replace("**", "").replace("*", "")
 
+        # ✅ Append only the clean response string to lesson history
+        lesson_history.append(clean_response)
+
         return clean_response
 
     except Exception as e:
         return f"An error occurred while generating the lesson plan: {str(e)}"
 
-# Function to generate assessment based on function generate_lessons
+# Function to generate assessment based on lessons
 # This function takes the teacher input and provides a structured assessment.
-#    
 
-def create_assessment(topic, subject, grade, no_of_questions):
-    """
-    Generates a multiple-choice assessment based on the given topic, subject, and grade level.
-    """
-    # Configure API key
-    genai.configure(api_key=gemini_secret_key)
+# ✅ Get the most recent lesson if it exists
+if lesson_history:
+    most_recent_lesson = lesson_history[-1]
+else:
+    print("No lesson history available yet.")
 
-    # Define system and user prompts
+def create_assessment(no_of_questions, content=None):
+    """
+    Generates a multiple-choice assessment based on the no of question and content.
+    """ 
+    content = content if content else most_recent_lesson
     system_prompt = f"""
-                    You are an expert AI-assisted Assessment Creator that helps teachers design
-                    high-quality multiple-choice questions (MCQs) for students.
-                     Task:
-                     - Create an assessment with {no_of_questions} multiple-choice questions.
-                     - Topic: {topic}
-                     - Subject: {subject}
-                     - Grade Level: {grade}
-                    Guidelines:
-                    - Each question should have 1 correct answer and 3 plausible distractors.
-                    - Label options as A, B, C, and D.
-                    - Provide the correct answer key at the end in this format:
-                    Q1: B
-                    Q2: D
-                    ...
-                    - Questions should match the specified grade difficulty.
-                    - If the input is irrelevant or nonsensical, respond with:
-                    "I may not be able to help you with this information."
-                    """
-
+    You are an expert educational assessment designer.
+    Using the following course material or lesson context, generate a structured assessment.
+    You are an expert AI-assisted Assessment Creator that helps teachers design
+    high-quality multiple-choice questions (MCQs) for students.
+    Task:
+        - Create an assessment with {no_of_questions} multiple-choice questions 
+        with the content: {content}
+        Guidelines:
+        - Each question should have 1 correct answer and 3 plausible distractors.
+        - Label options as A, B, C, and D.
+        - Provide the correct answer key at the end in this format:
+            Q1: B
+            Q2: D
+            ...
+        - Ensure questions are clear, concise, and relevant to the content.
+            - If the input is irrelevant or nonsensical, respond with:
+            "I may not be able to help you with this information."
+            """
     try:
         # Initialize Gemini model
         model = genai.GenerativeModel("gemini-2.5-pro")
@@ -204,5 +210,4 @@ def create_assessment(topic, subject, grade, no_of_questions):
         return response.text.strip()
 
     except Exception as e:
-
         return f"An error occurred while generating the assessment: {str(e)}"
