@@ -9,8 +9,16 @@ from src.lesson import schemas, models
 from src.assessments.models import Assessment
 from src.core.security import get_current_teacher
 from utils import generate_lessons_with_assessment
+from datetime import datetime
+from src.dashboard.models import TeacherMonthlyAnalytics
 
 router = APIRouter(prefix="/lessons", tags=["Lessons"])
+
+def get_current_month_str():
+    # e.g., "Oct-2025"
+    return datetime.utcnow().strftime("%b-%Y")
+
+
 def get_db():
     db = SessionLocal()
     try:
@@ -62,7 +70,24 @@ def create_lesson(
     )
     db.add(db_assessment)
     db.commit()
-    db.refresh(db_assessment)
+    
+    #analytics
+    month_str = get_current_month_str()
+    record = db.query(TeacherMonthlyAnalytics).filter_by(
+        teacher_id=current_teacher.id,
+        month=month_str
+    ).first()
+    if record:
+        record.lesson += 1
+    else:
+        record = TeacherMonthlyAnalytics(
+            teacher_id=current_teacher.id,
+            lesson=1,
+            month=month_str
+        )
+    db.add(record)
+    db.commit()
+    db.refresh(record)
     return db_lesson
 
 

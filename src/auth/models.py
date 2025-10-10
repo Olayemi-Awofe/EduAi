@@ -14,7 +14,12 @@ class Teacher(Base):
     school_id = Column(Integer, ForeignKey("schools.id"), nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)
 
-    # relationship: School -> teachers (back_populates on School)
+    # Relationships
     school = relationship("School", back_populates="teachers")
     lessons = relationship("Lesson", back_populates="teacher", cascade="all, delete-orphan")
-    progress = relationship("TeacherProgress", back_populates="teacher", cascade="all, delete-orphan")
+
+    skills = relationship("Skill", back_populates="teacher", cascade="all, delete-orphan")
+    sections = relationship("Section", back_populates="teacher", cascade="all, delete-orphan")
+    tests = relationship("Test", back_populates="teacher", cascade="all, delete-orphan")
+    questions = relationship("Question", back_populates="teacher", cascade="all, delete-orphan")
+    progress_records = relationship("TeacherSkillProgress", back_populates="teacher", cascade="all, delete-orphan")
