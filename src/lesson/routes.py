@@ -33,6 +33,15 @@ def create_lesson(
     no_of_questions = lesson.no_of_questions
     response = generate_lessons_with_assessment(topic, subject, grade, duration, lesson_outcome, no_of_questions)
 
+    lesson_content = response.get("lesson")
+    assessment_content = response.get("assessment")
+
+    if not lesson_content or not assessment_content:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Lesson generation failed: {response.get('error', 'No lesson or assessment returned')}"
+        )
+
     db_lesson = models.Lesson(
         curriculum_unit_id=lesson.curriculum_unit_id,
         teacher_id=current_teacher.id,
@@ -40,7 +49,7 @@ def create_lesson(
         subject=lesson.subject,
         grade=lesson.grade,
         duration=lesson.duration,
-        content=response["lesson"],
+        content=lesson_content,
     )
     db.add(db_lesson)
     db.commit()
@@ -49,7 +58,7 @@ def create_lesson(
     #saving data to assessment
     db_assessment = Assessment(
         lesson_id=db_lesson.id,
-        content=response["assessment"]
+        content=assessment_content
     )
     db.add(db_assessment)
     db.commit()

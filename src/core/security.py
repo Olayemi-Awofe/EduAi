@@ -34,7 +34,7 @@ def get_current_teacher(token: str = Depends(oauth2_scheme)):
     )
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-        teacher_email: int = payload.get("sub")
+        teacher_email: str = payload.get("sub")
         if teacher_email is None:
             raise credentials_exception
     except JWTError:

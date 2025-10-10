@@ -128,8 +128,20 @@ def generate_lessons_with_assessment(topic, subject, grade, duration, lesson_out
         "lesson_objectives": [],
         "instructional_materials": [],
         "lesson_introduction": "",
-        "lesson_development": [],
-        "learner_activities": [],
+        "lesson_development": [
+        {{
+            "time": "",
+            "activity": "",
+            "details": ""
+        }}
+        ],
+        "learner_activities": [
+        {{
+            "time": "",
+            "activity": "",
+            "details": ""
+        }}
+        ],
         "summary": "",
         "extension_activity": "",
         "teacher_reflection": ""

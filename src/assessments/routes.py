@@ -7,21 +7,21 @@ from src.assessments.schemas import AssessmentCreate, AssessmentRead
 
 router = APIRouter(prefix="/assessments", tags=["Assessments"])
 
-@router.post("/", response_model=AssessmentRead)
-def create_assessment(payload: AssessmentCreate, db: Session = Depends(get_db)):
-    assessment = Assessment(lesson_id=payload.lesson_id, content=payload.content)
-    db.add(assessment)
-    db.commit()
-    db.refresh(assessment)
-    return assessment
+# @router.post("/", response_model=AssessmentRead)
+# def create_assessment(payload: AssessmentCreate, db: Session = Depends(get_db)):
+#     assessment = Assessment(lesson_id=payload.lesson_id, content=payload.content)
+#     db.add(assessment)
+#     db.commit()
+#     db.refresh(assessment)
+#     return assessment
 
 @router.get("/", response_model=List[AssessmentRead])
 def list_assessments(db: Session = Depends(get_db)):
     return db.query(Assessment).all()
 
-@router.get("/{assessment_id}", response_model=AssessmentRead)
-def get_assessment(assessment_id: int, db: Session = Depends(get_db)):
-    a = db.query(Assessment).filter(Assessment.id == assessment_id).first()
+@router.get("/{lesson_id}", response_model=AssessmentRead)
+def get_assessment(lesson_id: int, db: Session = Depends(get_db)):
+    a = db.query(Assessment).filter(Assessment.lesson_id == lesson_id).first()
     if not a:
         raise HTTPException(status_code=404, detail="Assessment not found")
     return a

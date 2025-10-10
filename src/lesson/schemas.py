@@ -5,7 +5,6 @@ from sqlalchemy.dialects.postgresql import JSON
 
 class LessonCreate(BaseModel):
     curriculum_unit_id: Optional[int] = None
-    teacher_id: Optional[int] = None
     topic: str
     subject: str
     grade: int
