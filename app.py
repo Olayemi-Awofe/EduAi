@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException UploadFile, File, Form
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 from utils import *
@@ -31,9 +31,6 @@ class CreateLesson(BaseModel):
     lesson_outcome: str
 
 class CreateAssessment(BaseModel):
-    topic: str
-    subject: str
-    grade: int
     mcq_count: int
 
 # Serve the homepage
@@ -71,7 +68,7 @@ async def ai_chatbot(request: ChatModel):
 
 # generate-lessons endpoint # Serve the lesson page
 @app.get("/generate-lessons", response_class=HTMLResponse)
-async def lesson_ui():
+async def chatbot_ui():
     lesson_file = "templates/lessons.html"
     if not os.path.exists(lesson_file):
         raise HTTPException(status_code=404, detail="Lessons file not found.")
@@ -93,7 +90,7 @@ async def create_lessons(request: CreateLesson):
     if not topic or not subject or not grade or not duration or not lesson_outcome:
         raise HTTPException(status_code=400, detail="All field are required.")
     lessons = generate_lessons(topic, subject, grade, duration, lesson_outcome)
-    return {"weekly_monthly_goals": lessons}
+    return {"lessons": lessons}
 
 # generate-assessments endpoint # Serve the assessment page
 @app.get("/create-assessment", response_class=HTMLResponse)
@@ -108,16 +105,12 @@ async def assessment_ui():
 @app.post("/create-assessment")
 async def generate_assessments(request: CreateAssessment):
     """
-    Endpoint to process teacher input and generate assessments.
+    Endpoint to generate assessments.
+
     """
-    topic = request.topic
-    subject = request.subject
-    grade = request.grade
     no_of_questions = request.mcq_count
-
-    if not topic or not subject or not grade or not no_of_questions:
-        raise HTTPException(status_code=400, detail="All fields are required.")
-
-    assessment = create_assessment(topic, subject, grade, no_of_questions)
-
-    return {"assessment": assessment}   
+    
+    if not no_of_questions:
+        raise HTTPException(status_code=400, detail="All field are required.")
+    assessment = create_assessment(no_of_questions)
+    return {"assessment": assessment}
