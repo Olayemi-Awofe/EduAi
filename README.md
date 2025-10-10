@@ -126,4 +126,3 @@ Author & Maintainer
 Data Engineer: Olayemi Olusegun Awofe
 Hackathon: DataFest Africa 2025
 Project: AI for Smarter Teaching (Teacher AI Copilot)
-
