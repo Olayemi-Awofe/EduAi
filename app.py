@@ -9,8 +9,8 @@ from src.school.routes import router as school_router
 from src.curriculum.routes import router as curriculum_router
 from src.lesson.routes import router as lesson_router
 from src.assessments.routes import router as assessments_router
-from src.teacher_progress.routes import router as progress_router
 from src.dashboard.routes import router as dashboard_router
+from src.upskilling.routes import router as upskilling_router
 import os
 
 # Initialize DB tables
@@ -81,5 +81,5 @@ app.include_router(school_router)
 app.include_router(curriculum_router)
 app.include_router(lesson_router)
 app.include_router(assessments_router)
-app.include_router(progress_router)
 app.include_router(dashboard_router)
+app.include_router(upskilling_router)

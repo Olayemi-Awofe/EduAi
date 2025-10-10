@@ -187,5 +187,84 @@ def generate_lessons_with_assessment(topic, subject, grade, duration, lesson_out
     except Exception as e:
         return {"error": str(e)}
 
-# Function to generate assessment based on function generate_lessons
-# This function takes the teacher input and provides a structured assessment.
+
+def generate_skill(title: str, level: str):
+    """
+    Generates a complete, detailed upskilling module for teachers using Gemini.
+    Produces a skill overview, 3–6 rich sections (300+ words each), and a test.
+    """
+
+    system_prompt = f"""
+    You are an expert AI instructional designer creating complete, in-depth learning modules for teachers.
+
+    Based on:
+    - Skill Title: {title}
+    - Level: {level}
+
+    Generate a valid JSON ONLY in this exact structure:
+
+    {{
+      "skill": {{
+        "title": "{title}",
+        "description": "An engaging, professional summary of what this skill teaches and why it matters for educators.",
+        "level": "{level}",
+        "total_sections": <int>,
+        "category": "Relevant category e.g. Digital Skills, Pedagogy, or AI Literacy",
+        "estimated_duration": "e.g. 2 hours 15 minutes",
+        "thumbnail_url": "A realistic thumbnail URL or Unsplash image link"
+      }},
+      "sections": [
+        {{
+          "order": <int>,
+          "title": "Section title",
+          "content": "A detailed and self-contained explanation of 300+ words across 3–5 paragraphs. 
+            Write in a clear, educational tone with examples and teacher context.
+            Each paragraph should be separated by newlines. Use simple, formal English suitable for African educators.",
+          "video_url": "https://www.youtube.com/watch?v=example",
+          "resource_url": "https://example.com/resource.pdf",
+          "duration": "e.g. 25 minutes",
+          "quiz_included": true
+        }}
+      ],
+      "test": {{
+        "total_questions": 5,
+        "time_limit": 20,
+        "attempts": 3,
+        "questions": [
+          {{
+            "question": "A realistic question testing understanding of the content.",
+            "options": {{
+              "a": "Option A",
+              "b": "Option B",
+              "c": "Option C",
+              "d": "Option D"
+            }},
+            "correct_answer": "a",
+            "explanation": "Concise explanation of why this option is correct.",
+            "difficulty": "easy | medium | hard"
+          }}
+        ]
+      }}
+    }}
+
+    **Strict Rules:**
+    - Return valid JSON only (no markdown, comments, or explanations).
+    - Each section must be comprehensive, accurate, and educational — minimum 300 words.
+    - All examples and tone should suit teachers learning professional or technical skills.
+    - Questions must align with the section content.
+    """
+
+    try:
+        model = genai.GenerativeModel("gemini-2.5-pro")
+        response = model.generate_content(system_prompt)
+        ai_response = response.text.strip()
+
+        clean_response = re.sub(r"```(?:json)?|```", "", ai_response, flags=re.IGNORECASE).strip()
+
+        parsed = json.loads(clean_response)
+        return parsed
+
+    except json.JSONDecodeError:
+        return {"error": "Invalid JSON returned", "raw_output": ai_response}
+    except Exception as e:
+        return {"error": str(e)}
