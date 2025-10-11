@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 import os
 import json
 import google.generativeai as genai
-import fitz  # PyMuPDF for PDF extraction
+import re
 
 # Load environment variables from .env file
 load_dotenv()
@@ -108,106 +108,163 @@ def chat_ai(message):
 # Function to generate lesson plan and teaching aid based on teacher input
 # This function takes the teacher input and provides a structured lesson plan
 # and teaching aid to help teachers effectively deliver their lessons.
-
-lesson_history = []
-def generate_lessons(topic, subject, grade, duration, lesson_outcome):
-    """
-    Generates a detailed lesson plan and teaching aid based on teacher input.
-
-    """
+def generate_lessons_with_assessment(topic, subject, grade, duration, lesson_outcome, no_of_questions=5):
     system_prompt = f"""
-                    You are an AI-assisted Teaching Blueprint that helps teachers design 
-                    effective lesson plans and teaching aids for classroom delivery.
-                    Based on the following input:
-                    - Topic: {topic}
-                    - Subject: {subject}
-                    - Grade: {grade}
-                    - Duration: {duration}
-                    - Learning Outcome: {lesson_outcome}
+   You are an AI Teaching Assistant that generates structured lesson plans and assessments in pure JSON format.
+    Based on the following input:
+    - Topic: {topic}
+    - Subject: {subject}
+    - Grade: {grade}
+    - Duration: {duration}
+    - Learning Outcome: {lesson_outcome}
+    - Number of Questions: {no_of_questions}
 
-                    Generate a comprehensive and professional output with these sections:
-                    1. **Lesson Title**
-                    2. **Subject and Grade**
-                    3. **Duration**
-                    4. **Lesson Objectives**
-                    5. **Instructional Materials / Teaching Aids**
-                    6. **Lesson Introduction (Engagement Strategy)**
-                    7. **Lesson Development (Step-by-Step Teaching Activities)**
-                    8. **Learner Activities / Group Work**
-                    9. **Assessment / Evaluation Questions**
-                    10. **Summary / Conclusion**
-                    11. **Extension Activity or Homework**
-                    12. **Teacher Reflection Tips**
-                    
-                    Requirements:
-                    - Use clear, structured formatting.
-                    - Make content age-appropriate for the specified grade.
-                    - Keep it practical and classroom-ready.
-                    - If the input is irrelevant or nonsensical, respond with:
-                    "I may not be able to help you with this information."
-                    """
+    Return the output strictly as **valid JSON only** with this structure:
+    {{
+      "lesson": {{
+        "lesson_title": "",
+        "subject_and_grade": "",
+        "duration": "",
+        "lesson_objectives": [],
+        "instructional_materials": [],
+        "lesson_introduction": "",
+        "lesson_development": [
+        {{
+            "time": "",
+            "activity": "",
+            "details": ""
+        }}
+        ],
+        "learner_activities": [
+        {{
+            "time": "",
+            "activity": "",
+            "details": ""
+        }}
+        ],
+        "summary": "",
+        "extension_activity": "",
+        "teacher_reflection": ""
+      }},
+      "assessment": {{
+        "no_of_questions": {no_of_questions},
+        "questions": [
+        {{
+            "question": "",
+            "options": [
+              {{ "a": "" }},
+              {{ "b": "" }},
+              {{ "c": "" }},
+              {{ "d": "" }}
+            ],
+            "answer": ""
+        }}
+        ]
+      }}
+    }}
+    Notes:
+    - The entire response must be valid JSON only.
+    - Ensure lesson and assessment content are aligned to the topic and grade.  
+    """
 
     try:
-        # Initialize the Gemini model (use latest model for richer context)
         model = genai.GenerativeModel("gemini-2.5-pro")
-
-        # Generate the lesson plan and teaching aid
         response = model.generate_content(system_prompt)
-
-        # Extract and clean the text
         ai_response = response.text.strip()
-        clean_response = ai_response.replace("**", "").replace("*", "")
 
-        # ✅ Append only the clean response string to lesson history
-        lesson_history.append(clean_response)
+        # 🧹 Remove markdown ```json or ``` and whitespace
+        clean_response = re.sub(r"```(?:json)?|```", "", ai_response, flags=re.IGNORECASE).strip()
 
-        return clean_response
+        # ✅ Try parsing JSON now
+        parsed = json.loads(clean_response)
+        if "lesson" in parsed and "assessment" in parsed:
+            return parsed
+        else:
+            return {"lesson": {}, "assessment": {}}
 
+    except json.JSONDecodeError:
+        return {"error": "Model did not return valid JSON", "raw_text": ai_response}
     except Exception as e:
-        return f"An error occurred while generating the lesson plan: {str(e)}"
+        return {"error": str(e)}
 
-# Function to generate assessment based on lessons
-# This function takes the teacher input and provides a structured assessment.
 
-# ✅ Get the most recent lesson if it exists
-if lesson_history:
-    most_recent_lesson = lesson_history[-1]
-else:
-    print("No lesson history available yet.")
-
-def create_assessment(no_of_questions, content=None):
+def generate_skill(title: str, level: str):
     """
-    Generates a multiple-choice assessment based on the no of question and content.
-    """ 
-    content = content if content else most_recent_lesson
+    Generates a complete, detailed upskilling module for teachers using Gemini.
+    Produces a skill overview, 3–6 rich sections (300+ words each), and a test.
+    """
+
     system_prompt = f"""
-    You are an expert educational assessment designer.
-    Using the following course material or lesson context, generate a structured assessment.
-    You are an expert AI-assisted Assessment Creator that helps teachers design
-    high-quality multiple-choice questions (MCQs) for students.
-    Task:
-        - Create an assessment with {no_of_questions} multiple-choice questions 
-        with the content: {content}
-        Guidelines:
-        - Each question should have 1 correct answer and 3 plausible distractors.
-        - Label options as A, B, C, and D.
-        - Provide the correct answer key at the end in this format:
-            Q1: B
-            Q2: D
-            ...
-        - Ensure questions are clear, concise, and relevant to the content.
-            - If the input is irrelevant or nonsensical, respond with:
-            "I may not be able to help you with this information."
-            """
+    You are an expert AI instructional designer creating complete, in-depth learning modules for teachers.
+
+    Based on:
+    - Skill Title: {title}
+    - Level: {level}
+
+    Generate a valid JSON ONLY in this exact structure:
+
+    {{
+      "skill": {{
+        "title": "{title}",
+        "description": "An engaging, professional summary of what this skill teaches and why it matters for educators.",
+        "level": "{level}",
+        "total_sections": <int>,
+        "category": "Relevant category e.g. Digital Skills, Pedagogy, or AI Literacy",
+        "estimated_duration": "e.g. 2 hours 15 minutes",
+        "thumbnail_url": "A realistic thumbnail URL or Unsplash image link"
+      }},
+      "sections": [
+        {{
+          "order": <int>,
+          "title": "Section title",
+          "content": "A detailed and self-contained explanation of 300+ words across 3–5 paragraphs. 
+            Write in a clear, educational tone with examples and teacher context.
+            Each paragraph should be separated by newlines. Use simple, formal English suitable for African educators.",
+          "video_url": "https://www.youtube.com/watch?v=example",
+          "resource_url": "https://example.com/resource.pdf",
+          "duration": "e.g. 25 minutes",
+          "quiz_included": true
+        }}
+      ],
+      "test": {{
+        "total_questions": 5,
+        "time_limit": 10,
+        "attempts": 3,
+        "questions": [
+          {{
+            "question": "A realistic question testing understanding of the content.",
+            "options": {{
+              "a": "Option A",
+              "b": "Option B",
+              "c": "Option C",
+              "d": "Option D"
+            }},
+            "correct_answer": "a",
+            "explanation": "Concise explanation of why this option is correct.",
+            "difficulty": "easy | medium | hard"
+          }}
+        ]
+      }}
+    }}
+
+    **Strict Rules:**
+    - Return valid JSON only (no markdown, comments, or explanations).
+    - Each section must be comprehensive, accurate, and educational — minimum 300 words.
+    - All examples and tone should suit teachers learning professional or technical skills.
+    - Questions must align with the section content.
+    """
+
     try:
-        # Initialize Gemini model
         model = genai.GenerativeModel("gemini-2.5-pro")
-
-        # Generate the MCQ assessment
         response = model.generate_content(system_prompt)
+        ai_response = response.text.strip()
 
-        # Extract and return the generated text
-        return response.text.strip()
+        clean_response = re.sub(r"```(?:json)?|```", "", ai_response, flags=re.IGNORECASE).strip()
 
+        parsed = json.loads(clean_response)
+        return parsed
+
+    except json.JSONDecodeError:
+        return {"error": "Invalid JSON returned", "raw_output": ai_response}
     except Exception as e:
-        return f"An error occurred while generating the assessment: {str(e)}"
+        return {"error": str(e)}
