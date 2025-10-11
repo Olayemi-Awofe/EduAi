@@ -19,14 +19,6 @@ def signup(payload: TeacherCreate, db: Session = Depends(get_db)):
             detail="Email already registered"
         )
 
-    # Optional: Check if phone number already exists
-    existing_phone = db.query(Teacher).filter(Teacher.phone == payload.phone).first()
-    if existing_phone:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail="Phone number already registered"
-        )
-
     try:
         teacher = Teacher(
             name=payload.name,
