@@ -7,14 +7,6 @@ from src.assessments.schemas import AssessmentCreate, AssessmentRead
 
 router = APIRouter(prefix="/assessments", tags=["Assessments"])
 
-# @router.post("/", response_model=AssessmentRead)
-# def create_assessment(payload: AssessmentCreate, db: Session = Depends(get_db)):
-#     assessment = Assessment(lesson_id=payload.lesson_id, content=payload.content)
-#     db.add(assessment)
-#     db.commit()
-#     db.refresh(assessment)
-#     return assessment
-
 @router.get("/", response_model=List[AssessmentRead])
 def list_assessments(db: Session = Depends(get_db)):
     return db.query(Assessment).all()

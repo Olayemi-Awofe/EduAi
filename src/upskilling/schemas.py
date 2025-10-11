@@ -86,6 +86,7 @@ class QuestionOut(BaseModel):
     correct_answer: Optional[str]
     explanation: Optional[str]
     difficulty: Optional[str]
+    user_answer: Optional[str]
 
     class Config:
         orm_mode = True
@@ -109,6 +110,7 @@ class TestOut(BaseModel):
     total_questions: int
     time_limit: Optional[int]
     attempts: Optional[int]
+    score: Optional[int]
     questions: List[QuestionOut] = []
 
     class Config:
@@ -131,9 +133,6 @@ class QuestionCreate(QuestionBase):
     skill_id: int
     test_id: int
 
-
-
-# ====== Progress ======
 class TeacherSkillProgressBase(BaseModel):
     completed_sections: Optional[int] = 0
     progress: Optional[float] = 0
@@ -147,6 +146,7 @@ class TeacherSkillProgressCreate(TeacherSkillProgressBase):
 
 class TeacherSkillProgressOut(TeacherSkillProgressBase):
     progress: int
+    
 
     class Config:
         orm_mode = True
@@ -156,3 +156,11 @@ class SkillRead(SkillOut):
     sections: list[SectionOut] = []
     test: Optional[TestOut] = None
     progress_record: Optional[TeacherSkillProgressOut] = None
+
+class AnswerSubmit(BaseModel):
+    id: int
+    user_answer: str
+
+class TestSubmission(BaseModel):
+    skill_id: int
+    answers: List[AnswerSubmit]

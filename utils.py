@@ -228,7 +228,7 @@ def generate_skill(title: str, level: str):
       ],
       "test": {{
         "total_questions": 5,
-        "time_limit": 20,
+        "time_limit": 10,
         "attempts": 3,
         "questions": [
           {{

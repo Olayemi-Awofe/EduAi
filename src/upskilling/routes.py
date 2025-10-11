@@ -282,3 +282,81 @@ def update_section_progress(
     db.refresh(record)
 
     return { "progress": int((completed_sections / total_sections) * 100) }
+
+
+@router.post("/submit-test")
+def submit_test(
+    submission: schemas.TestSubmission,
+    db: Session = Depends(get_db),
+    current_teacher = Depends(get_current_teacher)
+):
+    # Fetch the test
+    test = db.query(models.Test).filter(models.Test.skill_id == submission.skill_id).first()
+    if not test:
+        raise HTTPException(status_code=404, detail="Test not found for this skill")
+
+    correct_count = 0
+
+    # Process each submitted answer
+    for answer in submission.answers:
+        question = db.query(models.Question).filter(models.Question.id == answer.id).first()
+        if question:
+            question.user_answer = answer.user_answer
+            if question.user_answer.strip().lower() == question.correct_answer.strip().lower():
+                question.correct = True
+                correct_count += 1
+            else:
+                question.correct = False
+            db.add(question)
+
+    # Calculate score as a percentage
+    total_questions = test.total_questions or len(submission.answers)
+    score_percentage = round((correct_count / total_questions) * 100, 2)
+
+    # Update test record
+    test.status = "completed"
+    test.score = score_percentage
+    db.add(test)
+
+    # Update teacher skill progress
+    progress = db.query(models.TeacherSkillProgress).filter(
+        models.TeacherSkillProgress.teacher_id == current_teacher.id,
+        models.TeacherSkillProgress.skill_id == submission.skill_id
+    ).first()
+
+    if progress:
+        progress.completed = True
+        progress.completed_at = datetime.utcnow()
+        progress.progress = 100
+        progress.score = score_percentage
+        db.add(progress)
+
+    db.commit()
+
+     #analytics
+    month_str = get_current_month_str()
+    record = db.query(TeacherMonthlyAnalytics).filter_by(
+        teacher_id=current_teacher.id,
+        month=month_str
+    ).first()
+    if record:
+        record.upskilling += 1
+    else:
+        record = TeacherMonthlyAnalytics(
+            teacher_id=current_teacher.id,
+            upskilling=1,
+            month=month_str
+        )
+    db.add(record)
+    db.commit()
+    
+    db.refresh(test)
+    test.questions = db.query(models.Question).filter(models.Question.test_id == test.id).all()
+
+    return {
+        "message": "Test submitted successfully",
+        "score": score_percentage,
+        "total_questions": total_questions,
+        "correct_answers": correct_count,
+        "test": test
+    }
