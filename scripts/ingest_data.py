@@ -15,7 +15,7 @@ def load_csv_to_sqlite(filename, table_name):
     file_path = os.path.join(data_folder, filename)
     df = pd.read_csv(file_path)
     df.to_sql(table_name, conn, if_exists="replace", index=False)
-    print(f"[✅] Loaded {filename} into table '{table_name}'")
+    print(f"Loaded {filename} into table '{table_name}'")
 
 # --- Load all tables
 tables = [
