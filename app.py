@@ -46,19 +46,8 @@ class CreateLesson(BaseModel):
 # Serve the homepage
 @app.get("/", response_class=HTMLResponse)
 async def home_ui():
-    with open("templates/home.html", "r") as file:
-        html_content = file.read()
-    return HTMLResponse(content=html_content)
-
-# Serve the chatbot page
-@app.get("/ai-copilot", response_class=HTMLResponse)
-async def chatbot_ui():
-    chatbot_file = "templates/copilot.html"
-    if not os.path.exists(chatbot_file):
-        raise HTTPException(status_code=404, detail="Chatbot file not found.")
-    with open(chatbot_file, "r") as file:
-        html_content = file.read()
-    return HTMLResponse(content=html_content)
+    
+    return "Welcome to EduAI API"
 
 # AI Chatbot endpoint
 @app.post("/ai-copilot")
