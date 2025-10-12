@@ -1,8 +1,20 @@
-from fastapi import FastAPI, HTTPException UploadFile, File, Form
+from fastapi import FastAPI, HTTPException, UploadFile, File, Form
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 from utils import *
 from fastapi.middleware.cors import CORSMiddleware
+from src.database import Base, engine
+from src.auth.routes import router as auth_router
+from src.school.routes import router as school_router
+from src.curriculum.routes import router as curriculum_router
+from src.lesson.routes import router as lesson_router
+from src.assessments.routes import router as assessments_router
+from src.dashboard.routes import router as dashboard_router
+from src.upskilling.routes import router as upskilling_router
+import os
+
+# Initialize DB tables
+Base.metadata.create_all(bind=engine)
 
 # FastAPI app
 app = FastAPI()
@@ -29,26 +41,13 @@ class CreateLesson(BaseModel):
     grade: int
     duration_minutes: int
     lesson_outcome: str
-
-class CreateAssessment(BaseModel):
-    mcq_count: int
+    no_of_questions: int
 
 # Serve the homepage
 @app.get("/", response_class=HTMLResponse)
 async def home_ui():
-    with open("templates/home.html", "r") as file:
-        html_content = file.read()
-    return HTMLResponse(content=html_content)
-
-# Serve the chatbot page
-@app.get("/ai-copilot", response_class=HTMLResponse)
-async def chatbot_ui():
-    chatbot_file = "templates/copilot.html"
-    if not os.path.exists(chatbot_file):
-        raise HTTPException(status_code=404, detail="Chatbot file not found.")
-    with open(chatbot_file, "r") as file:
-        html_content = file.read()
-    return HTMLResponse(content=html_content)
+    
+    return "Welcome to EduAI API"
 
 # AI Chatbot endpoint
 @app.post("/ai-copilot")
@@ -66,51 +65,11 @@ async def ai_chatbot(request: ChatModel):
 
     return {"response": response}
 
-# generate-lessons endpoint # Serve the lesson page
-@app.get("/generate-lessons", response_class=HTMLResponse)
-async def chatbot_ui():
-    lesson_file = "templates/lessons.html"
-    if not os.path.exists(lesson_file):
-        raise HTTPException(status_code=404, detail="Lessons file not found.")
-    with open(lesson_file, "r") as file:
-        html_content = file.read()
-    return HTMLResponse(content=html_content)
+app.include_router(auth_router)
+app.include_router(school_router)
+app.include_router(curriculum_router)
+app.include_router(lesson_router)
+app.include_router(assessments_router)
+app.include_router(dashboard_router)
+app.include_router(upskilling_router)
 
-@app.post("/generate-lessons")
-async def create_lessons(request: CreateLesson):
-    """
-    Endpoint to process teacher input and generate lesson plan and teaching aid.
-    """
-    topic = request.topic
-    subject = request.subject
-    grade = request.grade
-    duration = request.duration_minutes
-    lesson_outcome = request.lesson_outcome
-
-    if not topic or not subject or not grade or not duration or not lesson_outcome:
-        raise HTTPException(status_code=400, detail="All field are required.")
-    lessons = generate_lessons(topic, subject, grade, duration, lesson_outcome)
-    return {"lessons": lessons}
-
-# generate-assessments endpoint # Serve the assessment page
-@app.get("/create-assessment", response_class=HTMLResponse)
-async def assessment_ui():
-    assessment_file = "templates/assessments.html"
-    if not os.path.exists(assessment_file):
-        raise HTTPException(status_code=404, detail="Assessments file not found.")
-    with open(assessment_file, "r") as file:
-        html_content = file.read()
-    return HTMLResponse(content=html_content)
-
-@app.post("/create-assessment")
-async def generate_assessments(request: CreateAssessment):
-    """
-    Endpoint to generate assessments.
-
-    """
-    no_of_questions = request.mcq_count
-    
-    if not no_of_questions:
-        raise HTTPException(status_code=400, detail="All field are required.")
-    assessment = create_assessment(no_of_questions)
-    return {"assessment": assessment}

@@ -1,0 +1,25 @@
+from sqlalchemy import Column, Integer, String, ForeignKey, DateTime
+from sqlalchemy.orm import relationship
+from datetime import datetime
+from src.database import Base
+
+class Teacher(Base):
+    __tablename__ = "teachers"
+
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, nullable=False)
+    email = Column(String, unique=True, nullable=False, index=True)
+    password = Column(String, nullable=False)
+    phone = Column(String, nullable=True)
+    school_id = Column(Integer, ForeignKey("schools.id"), nullable=True)
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+    # Relationships
+    school = relationship("School", back_populates="teachers")
+    lessons = relationship("Lesson", back_populates="teacher", cascade="all, delete-orphan")
+
+    skills = relationship("Skill", back_populates="teacher", cascade="all, delete-orphan")
+    sections = relationship("Section", back_populates="teacher", cascade="all, delete-orphan")
+    tests = relationship("Test", back_populates="teacher", cascade="all, delete-orphan")
+    questions = relationship("Question", back_populates="teacher", cascade="all, delete-orphan")
+    progress_records = relationship("TeacherSkillProgress", back_populates="teacher", cascade="all, delete-orphan")
