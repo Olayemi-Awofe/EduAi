@@ -67,7 +67,7 @@ This backend powers the EduAI platform — handling data ingestion, AI generatio
 | **Backend Framework** | FastAPI |
 | **Database** | PostgreSQL + SQLAlchemy ORM |
 | **AI Model** | Google Gemini API |
-| **Data Engineering** | Pandas, NumPy, Faker, BeautifulSoup |
+| **Data Engineering** | Pandas, NumPy, Faker, BeautifulSoup, Python |
 | **Notebook Environment** | JupyterLab |
 | **Version Control** | Git + GitHub |
 | **Deployment** | Render / Vercel (API endpoint) |
@@ -102,8 +102,10 @@ Core tables include:
 - Scrape curriculum data from **Ministry of Education** and other public sources.  
 - Generate synthetic teacher and school data using **Faker**.  
 - Develop CSV datasets aligned with AI generation tasks.
-
-> Tools used: `pandas`, `faker`, `numpy`, `BeautifulSoup`, `requests`
+- Create Database
+- Ingest the data into the data base for the backend to fetch.
+  
+> Tools used: `pandas`, `faker`, `numpy`, `BeautifulSoup`, `requests`, `SQLAlchemy`
 
 ---
 
