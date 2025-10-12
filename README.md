@@ -118,6 +118,7 @@ python db/db_init.py
 ```bash
 DATABASE_URL=postgresql://<user>:<password>@<host>:<port>/<database>
 GEMINI_API_KEY=<your_google_gemini_key>
+SECRET_KEY=<any random strings>
 ```
 
 ## Quick Start
