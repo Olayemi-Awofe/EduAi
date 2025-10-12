@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException UploadFile, File, Form
+from fastapi import FastAPI, HTTPException, UploadFile, File, Form
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 from utils import *
@@ -72,3 +72,4 @@ app.include_router(lesson_router)
 app.include_router(assessments_router)
 app.include_router(dashboard_router)
 app.include_router(upskilling_router)
+
