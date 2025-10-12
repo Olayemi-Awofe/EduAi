@@ -1,128 +1,138 @@
-Accelerating Educators – Data Engineering Setup
+# Accelerating Educators – Backend & Data Engineering Setup
 
-# Overview
+**Empowering Teachers with Generative AI for Smarter Teaching**
 
-This repository contains the Data Engineering backbone for the Teacher AI Copilot MVP part of the DataFest Africa 2025 Hackathon project:
-“Accelerating Educators: AI for Smarter Teaching”
+This repository contains the **backend and data engineering** backbone for the **Teacher AI Copilot MVP**, part of the **DataFest Africa 2025 Hackathon Project**:  
+**_“Accelerating Educators: AI for Smarter Teaching”_**
 
-The objective is to build an AI-powered system that assists teachers in adapting to Nigeria’s new skill-based curriculum by generating lesson plans, teaching aids, assessments, and tracking teacher progress.
+---
 
-As the Data Engineer, this repo focuses on designing, simulating, and managing all data operations, from database schema creation, to scrapping Nigeria Mininstry of Eduction web for the new curriculum,data developement, ingestion, and pipeline automation.
+## Demo Video
 
-⚙️ End-to-End Data Engineering Workflow
-Step 1: Getting all the necessary data, scrapping Ministry of Education, And developing data to meet what we are buidling
+[![EduAI Demo](https://img.youtube.com/vi/DhYVuvVn6n8/0.jpg)](https://www.youtube.com/watch?v=DhYVuvVn6n8)
 
-The specific table:
+*Click the image above to watch the demo video on YouTube*
 
-Teachers 
+**Direct Link:** https://www.youtube.com/watch?v=DhYVuvVn6n8
+---
 
-Schools 
+## Frontend Repo
+https://github.com/offiongbassey/data-crafters-fe
+---
 
-Curriculum Units 
+## Test Link
+https://eduai-rosy.vercel.app/
 
-Lessons 
-
-Assessments 
-
-Teacher Progress 
-
-Audit Logs 
+## API Docs
+https://eduai-e9wp.onrender.com/docs
 
 
-Tools: pandas, faker, numpy, Beautiful soup, sqlite, and many other.
+## Overview
 
-Step 2: Initialize the Database
+The goal is to build an **AI-powered platform** that helps teachers in Nigeria adapt to the **new skill-based national curriculum** by automatically generating:
 
-Run db/db_init.py
+- 📚 Lesson plans  
+- 🧩 Teaching aids and skill-based pathways  
+- 📝 Assessments and tests  
+- 📊 Teacher progress tracking  
 
-This creates a normalized SQLite database (teacher_ai.db) that mirrors real-world relational structure.
+This backend powers the EduAI platform — handling data ingestion, AI generation (via **Google Gemini**), and secure API endpoints built with **FastAPI**.
 
-Core tables:
+---
 
-teachers
+## Architecture Overview
 
-schools
+### 🔹 Core Responsibilities
+1. **Data Engineering**
+   - Scraping curriculum data from the Nigerian Ministry of Education
+   - Generating and cleaning structured datasets for skills, lessons, and assessments
+   - Managing ingestion pipelines into PostgreSQL
 
-curriculum_units
+2. **Backend Engineering**
+   - Building scalable REST APIs with **FastAPI**
+   - Integrating **Google Gemini API** for generative tasks
+   - Handling teacher authentication, skill creation, and content delivery
 
-lessons
+3. **Generative AI Layer**
+   - **Gemini for Lessons:** Generate lesson content, topics, and objectives  
+   - **Gemini for Assessments:** Generate quizzes, tests, and evaluation rubrics  
+   - **Gemini for Skills:** Create structured learning paths and teacher upskilling modules  
 
-assessments
+---
 
-teacher_progress
+## Tech Stack
 
-audit_log
+| Layer | Tools |
+|-------|-------|
+| **Backend Framework** | FastAPI |
+| **Database** | PostgreSQL + SQLAlchemy ORM |
+| **AI Model** | Google Gemini API |
+| **Data Engineering** | Pandas, NumPy, Faker, BeautifulSoup, Python |
+| **Notebook Environment** | JupyterLab |
+| **Version Control** | Git + GitHub |
+| **Deployment** | Render / Vercel (API endpoint) |
 
-## Schema defines foreign key relationships and metadata tracking for explainability, trust, and accountability.
+---
 
-Step 3: Ingest Data into the DB
-Run scripts/ingest_data.py
-Script reads the scrapped and developed CSVs and loads them into the SQLite database
+## Database Schema
 
-Handles duplicate checks, schema validation, and type consistency
+The backend is powered by **PostgreSQL**, with well-defined relationships and constraints.  
+Core tables include:
 
-Output: edu_ai.db file stored inside /db folder.
-This file can be shared across teammates for developement and Repo.
+| Table | Description |
+|--------|--------------|
+| **teachers** | Registered teachers and credentials |
+| **schools** | School records and locations |
+| **curriculum_units** | Curriculum mapping from the Ministry of Education |
+| **lessons** | Lesson content generated via Gemini |
+| **assessments** | Tests and questions generated per lesson |
+| **skills** | Skill-based pathways for teacher upskilling |
+| **sections** | Sections of skills |
+| **teacher_progress** | Tracks teacher learning and interaction history |
+| **audit_logs** | For monitoring and explainability |
+| **test** | Test generated for skill learning |
+| **questions** | Generated questions test |
 
-Step 4: Data Access & Collaboration
 
-The SQLite DB can be queried directly using:
-import sqlite3
-conn = sqlite3.connect("db/edu_ai.db")
+---
 
+## End-to-End Data Engineering Workflow
 
-Other team members (ML, Backend, or Frontend) can use this same DB file to build and test:
-- The Lesson Plan Generator
-- Teacher Copilot chatbot
-- Dashboard analytics
+### **Step 1: Data Acquisition & Development**
+- Scrape curriculum data from **Ministry of Education** and other public sources.  
+- Generate synthetic teacher and school data using **Faker**.  
+- Develop CSV datasets aligned with AI generation tasks.
+- Create Database
+- Ingest the data into the data base for the backend to fetch.
+  
+> Tools used: `pandas`, `faker`, `numpy`, `BeautifulSoup`, `requests`, `SQLAlchemy`
 
-Since SQLite is file-based, the .db file can be shared, versioned, or rebuilt easily from scratch using your scripts.
+---
 
-Folder Structure
-teacher_ai_project/
-│
-├── README.md                  → Documentation & setup guide  
-├── requirements.txt            → Python dependencies  
-├── .gitignore                  → Ignored files (env, db, cache)
-│
-├── db/
-│   ├── db_init.py              → Creates database schema  
-│   └── edu_ai.db               → Generated SQLite database
-│   └── ingest_data.py          → ingest all the tables into SQLite database
-│
-├── notebooks/
-│   └── data_dev.ipynb          → Scrapper and Data dev notebook 
-│   └── curriculum.txt          → Numbers of curriculum scrapped from the Ministry of Education
-│   └── data_dev.ipynb          → Scrapper and Data dev notebook 
-│   └── testing.ipynb           → To test and query my DataBase
-│   └── questions_bank.json     → The question and answer of each subject scrap from the internet, exams bodies in Nigeria.
+### **Step 2: Initialize Database**
+Run the following to initialize your PostgreSQL schema:
 
-│
-├── data/                       → Stores exported datasets (CSV/JSON/PDf)
-└── curriculum.pdf              → Stored the scrapped all Curriculums pdfs of each levels and subject.
-└── The .csvs                   → All the scrapped and developped data
-│
-├── scripts/
-│   └── ingest_data.py          → Loads data into database
-│   ├── db_init.py              → Creates database schema  
+```bash
+python db/db_init.py
+```
 
-│
-└── src/
-    ├── config.py               → DB connection & constants  
-    └── utils.py                → Helper functions (logging, UUIDs, etc.)
+## Environmental Variables
+```bash
+DATABASE_URL=postgresql://<user>:<password>@<host>:<port>/<database>
+GEMINI_API_KEY=<your_google_gemini_key>
+SECRET_KEY=<any random strings>
+```
 
-Tech Stack
-Layer	Tools
-Database	SQLite, SQLAlchemy
-Scripting	Python 3.10+
-Notebook	Jupyter Lab / Jupyter Notebook
-Version Control	Git + GitHub
+## Quick Start
+```bash
+# Install dependencies
+pip install -r requirements.txt
 
-Collaboration Guide
+# Run database initialization
+python db/db_init.py
 
-The SQLite DB can be shared via GitHub.
-
-Author & Maintainer
-Data Engineer: Olayemi Olusegun Awofe
-Hackathon: DataFest Africa 2025
-Project: AI for Smarter Teaching (Teacher AI Copilot)
+# Start FastAPI server
+uvicorn src.main:app --reload
+```
+Visit http://localhost:8000/docs
+ to test the API.
